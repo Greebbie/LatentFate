@@ -14,11 +14,11 @@
 3. **Reading** — LLM 解析牌阵，输出结构化状态分析
 4. **Projection** — 基于 Reading 的分支推演，输出不同行动路径、时间窗口、可信度
 
-## 与普通塔罗 AI 的区别
+
 
 | | 普通塔罗 AI | LatentFate |
 |---|---|---|
-| 核心功能 | 解牌（文案生成） | 解牌 + 分支推演 |
+| 核心功能 | 解牌（文案生成） | 解牌 + 分支结果轨迹推演 |
 | 输出格式 | 散文段落 | 结构化 JSON |
 | 结论形式 | 单一结论 | if/else 分支路径 |
 | 时间维度 | 无 | 24h / 3d / 7d / 30d |
@@ -29,7 +29,7 @@
 - **框架**: Next.js 15 + TypeScript + Tailwind CSS
 - **UI**: shadcn/ui + Framer Motion
 - **LLM**: 多 Provider 支持（Claude / OpenAI / MiniMax / Qwen / Ollama）
-- **牌面**: 78 张 AI 生成全息线框风格塔罗牌
+- **牌面**: 78 张全息线框风格塔罗牌
 - **存储**: localStorage（客户端）
 
 ## 快速开始
@@ -65,13 +65,6 @@ components/
 data/cards.json         # 78 张塔罗牌完整数据
 public/cards/           # AI 生成的牌面图片
 ```
-
-## 设计原则
-
-- **冷、现代、克制** — 不是土味玄学产品
-- **半哲学、半 ML、半叙事模拟** — 世界观是「模式识别 + 符号推演」
-- **诚实** — 所有输出都是 narrative projection，不是 statistical probability
-- **不确定性是 feature** — highly likely / possible / unlikely / speculative
 
 ## 许可证
 
