@@ -3,6 +3,7 @@
 > **Everything can be predicted. We learned that from machine learning.**
 >
 > *Results are projections, not prophecies.*
+<img width="1482" height="1356" alt="1d2c638a01bc8a7c46259c56829f1f85" src="https://github.com/user-attachments/assets/74953cfa-1ce4-47d6-8855-dee0cd18c7c1" />
 
 塔罗不是占卜工具，而是符号输入接口。LatentFate 是一个以塔罗为符号输入的未来行为与关系轨迹推演引擎。
 
