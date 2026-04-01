@@ -1,0 +1,1484 @@
+[
+  {
+    "id": "the-fool",
+    "number": 0,
+    "name": "The Fool",
+    "nameZh": "愚者",
+    "arcana": "major",
+    "suit": null,
+    "element": "air",
+    "upright": {
+      "keywords": ["beginnings", "innocence", "spontaneity", "free spirit"],
+      "meaning": "The Fool represents the start of a new journey with boundless potential and childlike wonder. It encourages you to take a leap of faith, trusting that the universe will support your path even when the destination is unknown."
+    },
+    "reversed": {
+      "keywords": ["recklessness", "naivety", "risk-taking", "holding back"],
+      "meaning": "Reversed, The Fool warns of foolish decisions made without forethought or necessary caution. You may be taking dangerous risks or, conversely, letting fear prevent you from embracing a necessary new beginning."
+    },
+    "symbolism": "The eternal wanderer at the cliff's edge embodies pure potential before experience shapes it. The white rose of innocence and the loyal dog represent purity and instinct guiding the untested soul.",
+    "glyph": "A single circle balanced on the apex of a triangle, with a dotted spiral path descending from it"
+  },
+  {
+    "id": "the-magician",
+    "number": 1,
+    "name": "The Magician",
+    "nameZh": "魔术师",
+    "arcana": "major",
+    "suit": null,
+    "element": "air",
+    "upright": {
+      "keywords": ["manifestation", "willpower", "resourcefulness", "skill", "concentration"],
+      "meaning": "The Magician channels divine energy into the material world, reminding you that you have all the tools and resources needed to manifest your desires. This card calls for focused intention, confident action, and skillful use of your talents."
+    },
+    "reversed": {
+      "keywords": ["manipulation", "trickery", "wasted talent", "illusion"],
+      "meaning": "Reversed, The Magician suggests deception or misuse of one's abilities. You may be manipulating others, falling for someone else's tricks, or squandering your potential through lack of focus and discipline."
+    },
+    "symbolism": "With one hand raised to heaven and one pointing to earth, The Magician is the conduit between spiritual and physical realms. The four elemental tools on his table represent mastery over all aspects of creation.",
+    "glyph": "A vertical line connecting two horizontal figure-eights (lemniscates), one above and one below"
+  },
+  {
+    "id": "the-high-priestess",
+    "number": 2,
+    "name": "The High Priestess",
+    "nameZh": "女祭司",
+    "arcana": "major",
+    "suit": null,
+    "element": "water",
+    "upright": {
+      "keywords": ["intuition", "mystery", "subconscious", "inner voice", "wisdom"],
+      "meaning": "The High Priestess invites you to look beyond the surface and trust your intuition. She guards the threshold between the conscious and unconscious mind, urging you to be still, listen to your inner wisdom, and honor the mysteries that cannot be easily explained."
+    },
+    "reversed": {
+      "keywords": ["secrets", "disconnection", "withdrawal", "repressed intuition"],
+      "meaning": "Reversed, The High Priestess indicates you are ignoring your inner voice or that hidden information is being kept from you. There may be a disconnect from your intuitive self, leading to poor decisions based solely on surface-level logic."
+    },
+    "symbolism": "Seated between the pillars of duality — dark and light — she holds the scroll of esoteric knowledge. The crescent moon at her feet and the veil behind her represent the liminal space between what is known and what remains hidden.",
+    "glyph": "Two parallel vertical lines flanking a crescent moon, with a thin veil of horizontal crosshatching between them"
+  },
+  {
+    "id": "the-empress",
+    "number": 3,
+    "name": "The Empress",
+    "nameZh": "皇后",
+    "arcana": "major",
+    "suit": null,
+    "element": "earth",
+    "upright": {
+      "keywords": ["abundance", "fertility", "nurturing", "nature", "sensuality"],
+      "meaning": "The Empress embodies the creative force of nature and the nurturing power of the feminine principle. She signals a time of abundance, growth, and sensory pleasure, encouraging you to connect with the natural world and cultivate beauty in your life."
+    },
+    "reversed": {
+      "keywords": ["dependence", "smothering", "creative block", "neglect"],
+      "meaning": "Reversed, The Empress warns of creative stagnation or an imbalance in nurturing — either giving too much or neglecting self-care entirely. You may be overly dependent on others or struggling to connect with your own creative power."
+    },
+    "symbolism": "Surrounded by lush vegetation and flowing water, The Empress is Mother Nature herself. Her crown of twelve stars connects earthly fertility to celestial cycles, and the ripening wheat at her feet symbolizes the harvest of patient cultivation.",
+    "glyph": "A rounded diamond enclosing a stylized seed with three radiating leaf-like curves"
+  },
+  {
+    "id": "the-emperor",
+    "number": 4,
+    "name": "The Emperor",
+    "nameZh": "皇帝",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["authority", "structure", "stability", "leadership", "discipline"],
+      "meaning": "The Emperor represents order, authority, and the power of rational thought to shape the world. He calls you to establish firm foundations, take responsibility, and lead with confidence while maintaining fair and consistent boundaries."
+    },
+    "reversed": {
+      "keywords": ["tyranny", "rigidity", "domination", "inflexibility"],
+      "meaning": "Reversed, The Emperor becomes a tyrant who confuses control with leadership. This may indicate excessive rigidity, abuse of power, or an unwillingness to adapt. You may be either suffering under such authority or exercising it recklessly."
+    },
+    "symbolism": "Seated on a stone throne carved with ram heads, The Emperor commands through will and reason. The barren mountains behind him show the austere landscape of pure authority, while the armor beneath his robes reveals readiness for conflict.",
+    "glyph": "A square with a bold vertical line through its center, anchored by four small circles at the corners"
+  },
+  {
+    "id": "the-hierophant",
+    "number": 5,
+    "name": "The Hierophant",
+    "nameZh": "教皇",
+    "arcana": "major",
+    "suit": null,
+    "element": "earth",
+    "upright": {
+      "keywords": ["tradition", "spiritual wisdom", "conformity", "mentorship", "institutions"],
+      "meaning": "The Hierophant represents established spiritual teachings, traditions, and the wisdom passed down through institutions. He encourages you to seek guidance from trusted mentors, honor proven systems of knowledge, and find meaning within shared belief structures."
+    },
+    "reversed": {
+      "keywords": ["rebellion", "subversion", "unconventionality", "freedom"],
+      "meaning": "Reversed, The Hierophant signals a need to break free from rigid doctrines and question inherited beliefs. You may be feeling constrained by tradition or institutions that no longer serve your growth, calling for a more personal spiritual path."
+    },
+    "symbolism": "Sitting between two pillars of established doctrine, The Hierophant raises his hand in blessing while holding the triple cross of spiritual authority. The crossed keys at his feet represent the unlocking of sacred and profane mysteries.",
+    "glyph": "A triple-tiered cross above two intersecting arcs, forming a keyhole shape"
+  },
+  {
+    "id": "the-lovers",
+    "number": 6,
+    "name": "The Lovers",
+    "nameZh": "恋人",
+    "arcana": "major",
+    "suit": null,
+    "element": "air",
+    "upright": {
+      "keywords": ["love", "harmony", "partnership", "choices", "alignment"],
+      "meaning": "The Lovers represent deep connection, authentic relationships, and the transformative power of conscious choice. This card speaks to the harmony that emerges when your values, desires, and actions are aligned, whether in romance, friendship, or personal integrity."
+    },
+    "reversed": {
+      "keywords": ["disharmony", "imbalance", "misalignment", "poor choices"],
+      "meaning": "Reversed, The Lovers indicate a fundamental misalignment in values or a relationship in disharmony. You may be avoiding a difficult choice, compromising your authenticity, or experiencing conflict between your head and your heart."
+    },
+    "symbolism": "Two figures stand beneath a radiant angel, representing the union of opposites blessed by a higher principle. The tree of knowledge and the tree of life behind them echo the eternal choice between experience and innocence.",
+    "glyph": "Two overlapping circles forming a vesica piscis, crowned by a radiant triangle above"
+  },
+  {
+    "id": "the-chariot",
+    "number": 7,
+    "name": "The Chariot",
+    "nameZh": "战车",
+    "arcana": "major",
+    "suit": null,
+    "element": "water",
+    "upright": {
+      "keywords": ["determination", "willpower", "triumph", "control", "direction"],
+      "meaning": "The Chariot charges forward with focused determination and disciplined willpower. It signals victory through persistence, the ability to harness opposing forces toward a single goal, and the momentum that comes from knowing exactly where you are headed."
+    },
+    "reversed": {
+      "keywords": ["lack of direction", "aggression", "loss of control", "obstacles"],
+      "meaning": "Reversed, The Chariot warns of scattered energy, loss of direction, or a will that has become forceful rather than focused. You may be fighting battles that cannot be won through sheer determination alone, or your drive may be steering you toward a crash."
+    },
+    "symbolism": "A warrior rides a chariot drawn by two sphinxes of opposing colors, representing mastery over conflicting drives. The starry canopy above connects earthly conquest to cosmic order, while the city walls behind mark the departure from safety into the unknown.",
+    "glyph": "An upward-pointing chevron with two opposing curved lines beneath, like a streamlined arrow on diverging rails"
+  },
+  {
+    "id": "strength",
+    "number": 8,
+    "name": "Strength",
+    "nameZh": "力量",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["courage", "inner strength", "compassion", "patience", "influence"],
+      "meaning": "Strength reveals that true power lies not in force but in gentle perseverance and compassionate mastery of one's instincts. This card encourages you to face challenges with quiet courage, patience, and the confidence that comes from knowing your own depths."
+    },
+    "reversed": {
+      "keywords": ["self-doubt", "weakness", "raw emotion", "insecurity"],
+      "meaning": "Reversed, Strength indicates a crisis of confidence or a surrender to fear and self-doubt. You may be letting your baser instincts run unchecked, or you may have lost touch with the inner reservoir of courage that sustains you through difficulty."
+    },
+    "symbolism": "A woman gently closes the jaws of a lion, not through brute force but through calm authority and love. The lemniscate above her head signifies infinite inner resources, and the chain of flowers represents the soft bonds of compassion.",
+    "glyph": "A horizontal lemniscate (infinity symbol) with a gentle arc cradling it from below like open palms"
+  },
+  {
+    "id": "the-hermit",
+    "number": 9,
+    "name": "The Hermit",
+    "nameZh": "隐士",
+    "arcana": "major",
+    "suit": null,
+    "element": "earth",
+    "upright": {
+      "keywords": ["introspection", "solitude", "guidance", "inner wisdom", "contemplation"],
+      "meaning": "The Hermit withdraws from the noise of the world to seek truth in solitude and silence. This card signals a period of deep introspection, spiritual seeking, and the quiet illumination that comes from turning your lantern inward to examine your own soul."
+    },
+    "reversed": {
+      "keywords": ["isolation", "loneliness", "withdrawal", "lost"],
+      "meaning": "Reversed, The Hermit warns that solitude has become isolation and that withdrawal has turned into avoidance. You may be hiding from the world rather than genuinely seeking wisdom, or you may be refusing the guidance that others could offer."
+    },
+    "symbolism": "A cloaked figure stands atop a mountain peak, holding a lantern containing a six-pointed star. The mountain represents achievement through effort, the cloak is the mantle of discretion, and the lantern illuminates the path for those who follow.",
+    "glyph": "A six-pointed star enclosed within a lantern shape — a diamond atop a narrow trapezoid"
+  },
+  {
+    "id": "wheel-of-fortune",
+    "number": 10,
+    "name": "Wheel of Fortune",
+    "nameZh": "命运之轮",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["cycles", "fate", "destiny", "turning point", "luck"],
+      "meaning": "The Wheel of Fortune reminds you that change is the only constant and that fortune's favor is always in motion. A turning point is upon you — embrace the upswing with gratitude and the downswing with resilience, knowing that all cycles eventually complete."
+    },
+    "reversed": {
+      "keywords": ["resistance to change", "bad luck", "setbacks", "stagnation"],
+      "meaning": "Reversed, the Wheel suggests you are fighting against inevitable change or experiencing an unwelcome downturn. External forces may seem to conspire against you, but this is a reminder that clinging to what was only prolongs the suffering of transition."
+    },
+    "symbolism": "The great wheel turns ceaselessly, carrying figures up and down its rim in an eternal cycle. The sphinx at its crown represents the riddle of fate, while the serpent descending and the jackal rising embody the perpetual dance of decline and renewal.",
+    "glyph": "A circle divided into eight equal segments by radiating spokes, with small crescents marking the cardinal points"
+  },
+  {
+    "id": "justice",
+    "number": 11,
+    "name": "Justice",
+    "nameZh": "正义",
+    "arcana": "major",
+    "suit": null,
+    "element": "air",
+    "upright": {
+      "keywords": ["fairness", "truth", "law", "accountability", "clarity"],
+      "meaning": "Justice demands honesty, accountability, and the courage to see things as they truly are. This card calls you to weigh your decisions carefully, take responsibility for your actions, and trust that truth and fairness will ultimately prevail."
+    },
+    "reversed": {
+      "keywords": ["injustice", "dishonesty", "unfairness", "avoidance of accountability"],
+      "meaning": "Reversed, Justice signals that something is out of balance — dishonesty, bias, or a refusal to accept consequences. You or someone around you may be avoiding accountability, and the scales will not rest until truth is acknowledged."
+    },
+    "symbolism": "Justice sits between twin pillars holding a double-edged sword of discernment in one hand and perfectly balanced scales in the other. The sword cuts through deception, and the scales measure the weight of every deed against the feather of truth.",
+    "glyph": "A balanced scale with a vertical sword bisecting it from above, enclosed within a thin rectangular frame"
+  },
+  {
+    "id": "the-hanged-man",
+    "number": 12,
+    "name": "The Hanged Man",
+    "nameZh": "倒吊人",
+    "arcana": "major",
+    "suit": null,
+    "element": "water",
+    "upright": {
+      "keywords": ["surrender", "new perspective", "sacrifice", "patience", "letting go"],
+      "meaning": "The Hanged Man invites willing surrender and the revelation that comes from seeing the world upside-down. By releasing control and embracing a period of suspension, you gain a radical new perspective that transforms confusion into clarity."
+    },
+    "reversed": {
+      "keywords": ["stalling", "resistance", "indecision", "martyrdom"],
+      "meaning": "Reversed, The Hanged Man suggests you are resisting a necessary sacrifice or clinging stubbornly to an old viewpoint. The pause has become stagnation, and you may be playing the martyr rather than genuinely surrendering to the process of transformation."
+    },
+    "symbolism": "A figure hangs serenely from a living tree by one foot, forming a cross with the bent leg and arms behind the back. The halo of enlightenment around the head reveals that this is not punishment but chosen illumination through voluntary reversal.",
+    "glyph": "An inverted triangle suspended from a horizontal bar by a single line, with a small circle of light at the triangle's lowest point"
+  },
+  {
+    "id": "death",
+    "number": 13,
+    "name": "Death",
+    "nameZh": "死神",
+    "arcana": "major",
+    "suit": null,
+    "element": "water",
+    "upright": {
+      "keywords": ["transformation", "endings", "transition", "release", "renewal"],
+      "meaning": "Death is not an end but a profound transformation — the clearing away of what no longer serves to make room for what must emerge. This card signals an irreversible change, a necessary ending that opens the door to rebirth and renewal."
+    },
+    "reversed": {
+      "keywords": ["resistance to change", "stagnation", "fear of endings", "decay"],
+      "meaning": "Reversed, Death warns that you are clinging desperately to something that has already run its course. This resistance to natural transformation creates stagnation and inner decay, prolonging suffering that could be released through acceptance."
+    },
+    "symbolism": "The skeletal rider on a white horse moves inexorably forward, carrying a banner of the mystic rose — beauty born from decay. All figures before the rider must eventually yield, for Death is the great equalizer that spares no one and renews everything.",
+    "glyph": "A circle with a horizontal line through its center, transforming the lower half into a setting sun while the upper half sprouts a rising crescent"
+  },
+  {
+    "id": "temperance",
+    "number": 14,
+    "name": "Temperance",
+    "nameZh": "节制",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["balance", "moderation", "patience", "harmony", "alchemy"],
+      "meaning": "Temperance is the art of sacred balance — the patient blending of opposites into something greater than either alone. This card calls for moderation, the middle path, and the alchemical patience required to transform raw experience into golden wisdom."
+    },
+    "reversed": {
+      "keywords": ["excess", "imbalance", "impatience", "discord"],
+      "meaning": "Reversed, Temperance indicates a life out of balance — excess in one area creating deficiency in another. Impatience may be driving you toward extremes, and the delicate process of integration has been disrupted by haste or overindulgence."
+    },
+    "symbolism": "An angelic figure pours water endlessly between two cups, representing the ceaseless flow between conscious and unconscious, spirit and matter. One foot on land and one in water, the angel bridges opposing realms in perfect equilibrium.",
+    "glyph": "Two diagonal lines pouring into a central diamond from opposite corners, with flowing wave patterns connecting them"
+  },
+  {
+    "id": "the-devil",
+    "number": 15,
+    "name": "The Devil",
+    "nameZh": "恶魔",
+    "arcana": "major",
+    "suit": null,
+    "element": "earth",
+    "upright": {
+      "keywords": ["bondage", "shadow self", "attachment", "materialism", "temptation"],
+      "meaning": "The Devil exposes the chains of addiction, materialism, and self-imposed limitation that keep you bound. Yet the chains hang loose — this card reveals that your bondage is largely an illusion of your own making, and liberation begins with honest self-awareness."
+    },
+    "reversed": {
+      "keywords": ["release", "breaking free", "reclaiming power", "detachment"],
+      "meaning": "Reversed, The Devil signals the breaking of unhealthy bonds and the beginning of liberation from addiction, toxic patterns, or oppressive situations. You are reclaiming your power and seeing through the illusions that once held you captive."
+    },
+    "symbolism": "A horned figure presides over two chained humans whose bonds are loose enough to remove. The inverted pentagram above represents spirit subordinated to matter, and the dark throne reveals the seductive comfort of chosen captivity.",
+    "glyph": "An inverted pentagram enclosed in a circle, with two loose chain-link curves dangling from the lower points"
+  },
+  {
+    "id": "the-tower",
+    "number": 16,
+    "name": "The Tower",
+    "nameZh": "塔",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["upheaval", "sudden change", "revelation", "destruction", "awakening"],
+      "meaning": "The Tower strikes with the force of lightning, shattering illusions and false structures that cannot stand. Though the destruction feels catastrophic, it is ultimately liberating — clearing away what was built on unstable foundations to make way for authentic reconstruction."
+    },
+    "reversed": {
+      "keywords": ["avoidance", "fear of change", "delayed disaster", "narrowly averted"],
+      "meaning": "Reversed, The Tower suggests you are either narrowly avoiding a catastrophe or desperately trying to hold together something that needs to fall. The fear of upheaval may be worse than the upheaval itself, and delayed destruction only intensifies when it finally arrives."
+    },
+    "symbolism": "Lightning strikes the crown of a stone tower, sending figures tumbling from its heights. The crown blown from the tower represents the shattering of ego and false certainty, while the flames purify what must be rebuilt from the ground up.",
+    "glyph": "A vertical rectangle fractured by a jagged diagonal lightning bolt, with small scattered fragments radiating outward"
+  },
+  {
+    "id": "the-star",
+    "number": 17,
+    "name": "The Star",
+    "nameZh": "星星",
+    "arcana": "major",
+    "suit": null,
+    "element": "air",
+    "upright": {
+      "keywords": ["hope", "inspiration", "serenity", "renewal", "faith"],
+      "meaning": "The Star appears after the destruction of the Tower as a beacon of hope and gentle healing. This card brings renewed faith, quiet inspiration, and the assurance that even after the darkest night, the stars remain — guiding you toward your highest purpose."
+    },
+    "reversed": {
+      "keywords": ["despair", "disconnection", "lack of faith", "discouragement"],
+      "meaning": "Reversed, The Star indicates a loss of hope or faith in the future. You may feel spiritually disconnected, unable to see the light beyond your current darkness. This is a call to actively seek even the smallest sources of inspiration and trust."
+    },
+    "symbolism": "A nude figure kneels at a pool, pouring water onto land and into the water simultaneously — nourishing both the conscious and unconscious realms. The great star above, surrounded by seven smaller stars, represents cosmic guidance and the chakras of the spirit.",
+    "glyph": "An eight-pointed star with alternating long and short rays, centered above two flowing parallel curves"
+  },
+  {
+    "id": "the-moon",
+    "number": 18,
+    "name": "The Moon",
+    "nameZh": "月亮",
+    "arcana": "major",
+    "suit": null,
+    "element": "water",
+    "upright": {
+      "keywords": ["illusion", "fear", "subconscious", "intuition", "dreams"],
+      "meaning": "The Moon illuminates the shadowlands of the psyche where nothing is quite as it seems. This card signals a time of heightened intuition but also of confusion, anxiety, and deception — trust your instincts, but be cautious of projecting fears onto reality."
+    },
+    "reversed": {
+      "keywords": ["clarity", "truth revealed", "releasing fear", "overcoming anxiety"],
+      "meaning": "Reversed, The Moon suggests that illusions are dissolving and suppressed truths are coming to light. Fears and anxieties that once loomed large in the darkness are losing their power as clarity slowly returns and the unconscious yields its secrets."
+    },
+    "symbolism": "A full moon weeps between two towers while a dog and wolf howl at its face, representing the tame and wild aspects of the psyche. A crayfish emerges from the primordial pool of the unconscious, beginning the long path between instinct and civilization.",
+    "glyph": "A crescent moon nested within a larger crescent, both facing the same direction, with three descending droplets below"
+  },
+  {
+    "id": "the-sun",
+    "number": 19,
+    "name": "The Sun",
+    "nameZh": "太阳",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["joy", "success", "vitality", "clarity", "celebration"],
+      "meaning": "The Sun radiates pure joy, success, and the exuberant warmth of life fully lived. This is one of the most positive cards in the deck, promising clarity after confusion, vitality after exhaustion, and the simple happiness that comes from being fully present."
+    },
+    "reversed": {
+      "keywords": ["temporary setback", "inner child wounded", "overconfidence", "dimmed joy"],
+      "meaning": "Reversed, The Sun's light is temporarily obscured — joy is muted, success delayed, or confidence shaken. You may be struggling to see the bright side or allowing pessimism to cloud what should be a period of celebration and warmth."
+    },
+    "symbolism": "A radiant sun beams down on a joyful child riding a white horse through a garden of sunflowers. The child's nakedness represents innocence and authenticity, while the sunflowers turn toward the light just as all living things orient toward truth and warmth.",
+    "glyph": "A circle with twelve evenly spaced straight rays alternating with twelve wavy rays, forming a radiant sunburst"
+  },
+  {
+    "id": "judgement",
+    "number": 20,
+    "name": "Judgement",
+    "nameZh": "审判",
+    "arcana": "major",
+    "suit": null,
+    "element": "fire",
+    "upright": {
+      "keywords": ["rebirth", "calling", "absolution", "reckoning", "awakening"],
+      "meaning": "Judgement sounds the trumpet call of spiritual awakening and the final reckoning before rebirth. This card asks you to honestly evaluate your life, release old guilt and regret, answer your true calling, and rise renewed into the next phase of your existence."
+    },
+    "reversed": {
+      "keywords": ["self-doubt", "refusal of calling", "harsh self-judgment", "stagnation"],
+      "meaning": "Reversed, Judgement suggests you are ignoring an important inner calling or being too harsh in your self-evaluation. You may be haunted by past mistakes, unable to forgive yourself, or refusing the transformation that awaits if you would only answer the call."
+    },
+    "symbolism": "An angel blows a great trumpet from the clouds while figures rise from their coffins with arms outstretched. The scene depicts the moment of final awakening — not punishment but liberation, as the dead self gives way to the reborn spirit.",
+    "glyph": "A vertical trumpet shape emitting concentric semicircular sound waves, above three small rising rectangles"
+  },
+  {
+    "id": "the-world",
+    "number": 21,
+    "name": "The World",
+    "nameZh": "世界",
+    "arcana": "major",
+    "suit": null,
+    "element": "earth",
+    "upright": {
+      "keywords": ["completion", "integration", "fulfillment", "wholeness", "accomplishment"],
+      "meaning": "The World celebrates the triumphant completion of a great cycle and the integration of all lessons learned along the way. You have achieved wholeness, and this card honors your accomplishment while hinting that a new cycle of growth is about to begin."
+    },
+    "reversed": {
+      "keywords": ["incompletion", "shortcuts", "delays", "lack of closure"],
+      "meaning": "Reversed, The World indicates that something remains unfinished or that you are seeking shortcuts to avoid the final steps of completion. Closure eludes you, and there may be loose ends that must be tied before you can truly move on to the next chapter."
+    },
+    "symbolism": "A dancing figure is encircled by a great laurel wreath, holding two wands of balanced power. The four creatures in the corners — lion, eagle, bull, and angel — represent the fixed signs of the zodiac and the integration of all elemental forces into unity.",
+    "glyph": "A perfect circle enclosed within an oval wreath pattern, with four small symbols — triangle, square, pentagon, circle — at the cardinal points"
+  },
+  {
+    "id": "ace-of-wands",
+    "number": 1,
+    "name": "Ace of Wands",
+    "nameZh": "权杖一",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["inspiration", "new beginnings", "creative spark", "potential"],
+      "meaning": "The Ace of Wands is a bolt of pure creative fire — an exciting new idea, opportunity, or venture is presenting itself. Seize this moment of inspiration and channel its raw energy into passionate action before the spark fades."
+    },
+    "reversed": {
+      "keywords": ["delays", "lack of motivation", "creative block", "missed opportunity"],
+      "meaning": "Reversed, the Ace of Wands suggests creative stagnation or a promising opportunity that has stalled. The spark of inspiration is struggling to ignite, and you may need to clear internal resistance before the flame can catch."
+    },
+    "symbolism": "A hand emerges from a cloud offering a single sprouting wand, representing the divine gift of creative potential. The leaves falling from the wand signify that this seed of inspiration is already alive and ready to grow.",
+    "glyph": "A single vertical line with three small leaf-shaped flames emerging from its tip, enclosed in a burst of short radiating dashes"
+  },
+  {
+    "id": "two-of-wands",
+    "number": 2,
+    "name": "Two of Wands",
+    "nameZh": "权杖二",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["planning", "vision", "discovery", "future decisions"],
+      "meaning": "The Two of Wands stands at the crossroads between the known and the unknown, holding the world in hand while contemplating the next move. This card encourages bold planning and the courage to look beyond your current horizons toward greater possibilities."
+    },
+    "reversed": {
+      "keywords": ["fear of the unknown", "poor planning", "playing it safe", "indecision"],
+      "meaning": "Reversed, the Two of Wands indicates a reluctance to step outside your comfort zone or a failure to plan adequately for the future. You may be clinging to what is familiar rather than pursuing the grander vision that calls to you."
+    },
+    "symbolism": "A figure stands on castle battlements holding a globe in one hand and a wand in the other, gazing out at a vast landscape. The world literally in hand represents mastery of one's domain, while the distant horizon beckons toward expansion.",
+    "glyph": "Two parallel vertical lines with a small globe shape centered between them at mid-height"
+  },
+  {
+    "id": "three-of-wands",
+    "number": 3,
+    "name": "Three of Wands",
+    "nameZh": "权杖三",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["expansion", "foresight", "progress", "enterprise"],
+      "meaning": "The Three of Wands watches ships sail toward distant shores, representing plans set in motion and the anticipation of their return with rewards. Your efforts are beginning to bear fruit, and the horizon is opening with expanding opportunities."
+    },
+    "reversed": {
+      "keywords": ["delays", "frustration", "obstacles to progress", "lack of foresight"],
+      "meaning": "Reversed, the Three of Wands signals unexpected delays or setbacks in plans that seemed to be progressing well. Your ships may be slow to return, and frustration with the pace of expansion is testing your patience and resolve."
+    },
+    "symbolism": "A merchant watches three ships on the sea from a cliff, with three wands planted firmly in the earth. The ships represent ventures sent forth with confidence, and the elevated vantage point symbolizes the strategic perspective needed for long-term success.",
+    "glyph": "Three vertical lines arranged in a slight forward fan, with small triangular pennant shapes at their tops"
+  },
+  {
+    "id": "four-of-wands",
+    "number": 4,
+    "name": "Four of Wands",
+    "nameZh": "权杖四",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["celebration", "harmony", "homecoming", "community", "milestone"],
+      "meaning": "The Four of Wands marks a joyful celebration and the achievement of a significant milestone. This card brings feelings of harmony, belonging, and the warmth of community — a welcome home after effort, or a foundation worth celebrating."
+    },
+    "reversed": {
+      "keywords": ["instability", "lack of support", "conflict at home", "transition"],
+      "meaning": "Reversed, the Four of Wands suggests disharmony within your home or community, or a celebration that feels premature. The foundations you thought were secure may be shaking, and a sense of belonging may be harder to find than expected."
+    },
+    "symbolism": "Four wands form a canopy adorned with garlands and flowers, creating a welcoming gateway. Figures dance in celebration beneath it, representing the joy of community, the completion of a building phase, and the warmth of shared accomplishment.",
+    "glyph": "Four vertical lines arranged as two pairs, connected at the top by a gentle garland arc, forming a gateway shape"
+  },
+  {
+    "id": "five-of-wands",
+    "number": 5,
+    "name": "Five of Wands",
+    "nameZh": "权杖五",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["conflict", "competition", "tension", "disagreement", "rivalry"],
+      "meaning": "The Five of Wands depicts the clash of competing wills and ideas, where everyone fights for their position but no one gains clear advantage. This card signals healthy competition, creative friction, or the productive chaos that precedes breakthrough."
+    },
+    "reversed": {
+      "keywords": ["avoidance of conflict", "compromise", "resolution", "inner conflict"],
+      "meaning": "Reversed, the Five of Wands suggests either the resolution of conflict through compromise or a tendency to avoid necessary confrontation. Internal conflicts may be more draining than external ones, and the desire for peace may come at the cost of authenticity."
+    },
+    "symbolism": "Five figures brandish wands in a chaotic melee where no clear winner emerges. The scene represents the productive friction of diverse viewpoints colliding — not destructive war but the spirited competition that sharpens ideas and strengthens resolve.",
+    "glyph": "Five short lines crossing each other at various angles, forming a loose asterisk of creative tension"
+  },
+  {
+    "id": "six-of-wands",
+    "number": 6,
+    "name": "Six of Wands",
+    "nameZh": "权杖六",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["victory", "recognition", "triumph", "public acclaim", "confidence"],
+      "meaning": "The Six of Wands rides in triumphant procession, crowned with the laurel of victory and celebrated by the crowd. This card signals well-earned recognition, the confidence that comes from proven success, and a public acknowledgment of your achievements."
+    },
+    "reversed": {
+      "keywords": ["ego", "fall from grace", "lack of recognition", "private victory"],
+      "meaning": "Reversed, the Six of Wands warns of excessive pride, a fall from a position of prominence, or accomplishments that go unrecognized by others. The victory may be hollow, the acclaim fleeting, or the ego inflated beyond what the achievement warrants."
+    },
+    "symbolism": "A rider crowned with a laurel wreath holds a wand bearing a victory garland, while followers carry wands in celebration. The procession represents the moment when personal achievement becomes public triumph, and effort is rewarded with honor.",
+    "glyph": "Six vertical lines arranged in a V-formation like a procession, with a small laurel circle crowning the foremost line"
+  },
+  {
+    "id": "seven-of-wands",
+    "number": 7,
+    "name": "Seven of Wands",
+    "nameZh": "权杖七",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["perseverance", "defense", "standing your ground", "courage"],
+      "meaning": "The Seven of Wands stands firm on higher ground against challengers approaching from below. This card calls for courage in defending your position, beliefs, or achievements against opposition — you have the advantage, but you must fight to keep it."
+    },
+    "reversed": {
+      "keywords": ["overwhelmed", "giving up", "yielding", "exhaustion"],
+      "meaning": "Reversed, the Seven of Wands suggests you are losing the will to fight or feeling overwhelmed by constant challenges. The defensive position is becoming exhausting, and you may need to consider whether this particular hill is worth the battle."
+    },
+    "symbolism": "A lone figure stands on elevated ground wielding a wand against six others rising from below. The mismatched shoes suggest being caught off-guard, yet the high ground advantage shows that courage and conviction can overcome surprise and numbers.",
+    "glyph": "One bold vertical line elevated above six shorter lines that angle upward toward it from below"
+  },
+  {
+    "id": "eight-of-wands",
+    "number": 8,
+    "name": "Eight of Wands",
+    "nameZh": "权杖八",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["swift action", "movement", "momentum", "rapid progress"],
+      "meaning": "The Eight of Wands flies through the air with unstoppable momentum — events are accelerating and things are moving fast. This card signals rapid communication, swift travel, and the exhilarating pace of plans finally taking flight after a period of waiting."
+    },
+    "reversed": {
+      "keywords": ["delays", "frustration", "waiting", "slowing down"],
+      "meaning": "Reversed, the Eight of Wands indicates frustrating delays, miscommunications, or plans that have stalled mid-flight. The momentum you expected has not materialized, and patience is required while obstacles are cleared from the path."
+    },
+    "symbolism": "Eight wands fly through a clear sky in parallel formation, arcing toward the ground with purposeful direction. No figures appear — this is pure motion and velocity, the moment between launching an intention and its inevitable arrival at its target.",
+    "glyph": "Eight diagonal parallel lines angled at forty-five degrees, suggesting swift uniform motion across the space"
+  },
+  {
+    "id": "nine-of-wands",
+    "number": 9,
+    "name": "Nine of Wands",
+    "nameZh": "权杖九",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["resilience", "persistence", "last stand", "determination", "grit"],
+      "meaning": "The Nine of Wands is the card of the battle-weary warrior who refuses to yield. Though battered and exhausted, you have come too far to quit now. Summon your remaining strength — the final challenge stands between you and hard-won victory."
+    },
+    "reversed": {
+      "keywords": ["paranoia", "exhaustion", "giving up", "overwhelm"],
+      "meaning": "Reversed, the Nine of Wands warns of complete exhaustion and the temptation to abandon your efforts just before the finish line. You may be seeing threats where none exist, or your resilience may have finally reached its breaking point."
+    },
+    "symbolism": "A bandaged figure leans wearily on a wand while eight others form a defensive wall behind. The wounds speak of trials endured, the wand-wall of defenses built through experience, and the watchful stance of someone who knows one more test awaits.",
+    "glyph": "Eight vertical lines forming a fence-like row with one slightly separated line in front, a small bandage cross on its midsection"
+  },
+  {
+    "id": "ten-of-wands",
+    "number": 10,
+    "name": "Ten of Wands",
+    "nameZh": "权杖十",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["burden", "responsibility", "hard work", "overcommitment"],
+      "meaning": "The Ten of Wands carries the weight of too many responsibilities, struggling under a burden that has grown beyond what one person should bear. This card signals that your ambitions have become oppressive and it is time to delegate, prioritize, or set some burdens down."
+    },
+    "reversed": {
+      "keywords": ["release", "delegation", "burnout", "lightening the load"],
+      "meaning": "Reversed, the Ten of Wands suggests you are beginning to release unnecessary burdens or have reached a state of burnout that demands change. Learning to delegate and say no is essential before the weight crushes your spirit entirely."
+    },
+    "symbolism": "A figure struggles toward a distant town carrying ten heavy wands bundled together, unable to see the path ahead. The town represents the goal, but the crushing weight of accumulated duties threatens to prevent arrival.",
+    "glyph": "Ten tightly bundled vertical lines cinched together at the center, bowing slightly under implied weight"
+  },
+  {
+    "id": "page-of-wands",
+    "number": 11,
+    "name": "Page of Wands",
+    "nameZh": "权杖侍从",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["enthusiasm", "exploration", "discovery", "free spirit"],
+      "meaning": "The Page of Wands bursts with youthful enthusiasm and the thrill of a new creative adventure. This card signals exciting news, the spark of a fresh idea, or the beginning of an exploratory journey driven by curiosity and an adventurous spirit."
+    },
+    "reversed": {
+      "keywords": ["hesitation", "lack of direction", "immaturity", "scattered energy"],
+      "meaning": "Reversed, the Page of Wands indicates scattered energy and ideas that never progress beyond the excitement of conception. Enthusiasm without follow-through, or a fear of commitment to any single path, may be holding you back from real progress."
+    },
+    "symbolism": "A young figure holds a wand upright while gazing at the salamanders on their tunic — creatures of fire that thrive in transformation. The desert landscape behind suggests uncharted territory, while the feathered cap signals a readiness for adventure.",
+    "glyph": "A small flame shape atop a short vertical line, surrounded by three tiny scattered spark dots"
+  },
+  {
+    "id": "knight-of-wands",
+    "number": 12,
+    "name": "Knight of Wands",
+    "nameZh": "权杖骑士",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["action", "adventure", "passion", "impulsiveness", "energy"],
+      "meaning": "The Knight of Wands charges forward with fiery passion and fearless energy, pursuing goals with reckless enthusiasm. This card signals a time for bold, decisive action — ride the wave of your passion and let nothing stand between you and your quest."
+    },
+    "reversed": {
+      "keywords": ["recklessness", "haste", "frustration", "scattered efforts"],
+      "meaning": "Reversed, the Knight of Wands warns of impulsive action without strategy, anger that burns bridges, or energy scattered across too many pursuits. The fire that should propel you forward is instead burning chaotically in all directions."
+    },
+    "symbolism": "An armored knight on a rearing horse charges across a desert landscape, wand held high and plume streaming behind. The salamanders on the armor represent transformation through fire, and the pyramids in the distance mark the ambitious destination.",
+    "glyph": "A bold diagonal line leaning forward with a flame at its tip and a small chevron base suggesting a galloping stance"
+  },
+  {
+    "id": "queen-of-wands",
+    "number": 13,
+    "name": "Queen of Wands",
+    "nameZh": "权杖王后",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["confidence", "independence", "warmth", "determination", "vibrancy"],
+      "meaning": "The Queen of Wands radiates confident warmth and magnetic charisma, drawing others to her with effortless grace. She embodies creative independence, passionate determination, and the ability to lead through inspiration rather than intimidation."
+    },
+    "reversed": {
+      "keywords": ["jealousy", "selfishness", "demanding", "insecurity"],
+      "meaning": "Reversed, the Queen of Wands becomes possessive, jealous, and domineering — her warmth turning to scorching heat. Insecurity may be driving controlling behavior, or creative confidence has curdled into arrogance and self-centeredness."
+    },
+    "symbolism": "A queen sits on a throne adorned with lions and sunflowers, holding a wand in one hand while a black cat sits at her feet. The sunflowers represent joy and vitality, the lions embody courage, and the black cat signals an intuitive connection to mystery.",
+    "glyph": "A vertical line crowned by a sunflower-like radial pattern, flanked by two small lion-head silhouettes"
+  },
+  {
+    "id": "king-of-wands",
+    "number": 14,
+    "name": "King of Wands",
+    "nameZh": "权杖国王",
+    "arcana": "minor",
+    "suit": "wands",
+    "element": "fire",
+    "upright": {
+      "keywords": ["leadership", "vision", "boldness", "entrepreneurship", "honor"],
+      "meaning": "The King of Wands rules with visionary leadership and the bold confidence of one who has mastered the creative fire. He inspires others through decisive action and grand vision, turning ambitious dreams into tangible reality through charismatic command."
+    },
+    "reversed": {
+      "keywords": ["impulsiveness", "tyranny", "viciousness", "overbearing"],
+      "meaning": "Reversed, the King of Wands becomes a ruthless tyrant whose vision serves only ego. Leadership devolves into bullying, bold decisions become reckless gambles, and the creative fire that once inspired now intimidates and destroys."
+    },
+    "symbolism": "A king sits on a salamander-adorned throne holding a living, sprouting wand, with a salamander at his feet. The living wand shows that his authority is rooted in genuine creative power, and the salamander represents his mastery over transformation and renewal.",
+    "glyph": "A bold vertical line with a crown-shaped top of three points, resting on a wide triangular base with salamander-curve flourishes"
+  },
+  {
+    "id": "ace-of-cups",
+    "number": 1,
+    "name": "Ace of Cups",
+    "nameZh": "圣杯一",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["new love", "compassion", "emotional awakening", "intuition"],
+      "meaning": "The Ace of Cups overflows with the pure essence of emotional and spiritual renewal. A new love, deep compassion, or profound intuitive opening is being offered — open your heart to receive this gift of connection and allow your feelings to flow freely."
+    },
+    "reversed": {
+      "keywords": ["emotional loss", "blocked feelings", "emptiness", "repressed emotions"],
+      "meaning": "Reversed, the Ace of Cups suggests an emotional blockage or a heart that has closed itself off from love and connection. You may be repressing your feelings, pouring from an empty cup, or refusing the emotional opening that is being offered to you."
+    },
+    "symbolism": "A hand emerges from a cloud holding a golden chalice from which five streams of water overflow, feeding a lotus-covered pool below. The dove descending with a wafer represents the blessing of spirit upon the waters of emotion.",
+    "glyph": "A chalice shape with five flowing lines cascading downward from its rim, with a small descending dove silhouette above"
+  },
+  {
+    "id": "two-of-cups",
+    "number": 2,
+    "name": "Two of Cups",
+    "nameZh": "圣杯二",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["partnership", "unity", "mutual attraction", "connection", "balance"],
+      "meaning": "The Two of Cups celebrates the beautiful meeting of two hearts in mutual respect and genuine affection. Whether romantic love, deep friendship, or a meaningful partnership, this card signals authentic connection built on equal exchange and shared values."
+    },
+    "reversed": {
+      "keywords": ["imbalance", "broken partnership", "disharmony", "separation"],
+      "meaning": "Reversed, the Two of Cups indicates a relationship falling out of balance — one person giving more than the other, or a once-harmonious bond developing cracks. Miscommunication and unmet needs may be eroding the foundation of connection."
+    },
+    "symbolism": "Two figures face each other, exchanging cups in a gesture of mutual offering. Above them rises the caduceus of Hermes crowned by a winged lion, symbolizing the alchemical marriage of complementary energies and the healing power of true partnership.",
+    "glyph": "Two cup shapes facing each other with a caduceus (two intertwining lines around a vertical axis) rising between them"
+  },
+  {
+    "id": "three-of-cups",
+    "number": 3,
+    "name": "Three of Cups",
+    "nameZh": "圣杯三",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["celebration", "friendship", "community", "joy", "gathering"],
+      "meaning": "The Three of Cups dances with the exuberant joy of friends coming together in celebration. This card signals communal happiness, the strength found in chosen family, and the importance of marking life's blessings with those you love."
+    },
+    "reversed": {
+      "keywords": ["overindulgence", "gossip", "exclusion", "isolation"],
+      "meaning": "Reversed, the Three of Cups warns of social excess, superficial connections, or the pain of feeling excluded from a group. Celebrations may have become escapism, friendships may harbor gossip, or you may be isolating yourself from genuine community."
+    },
+    "symbolism": "Three figures raise their cups in a toast, dancing in a circle wreathed with flowers and fruit. The abundant harvest at their feet represents the shared bounty of community, and the circular dance embodies the reciprocal joy of genuine fellowship.",
+    "glyph": "Three cup shapes arranged in a triangular formation with curved connecting lines forming a circular dance pattern between them"
+  },
+  {
+    "id": "four-of-cups",
+    "number": 4,
+    "name": "Four of Cups",
+    "nameZh": "圣杯四",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["contemplation", "apathy", "reevaluation", "discontent"],
+      "meaning": "The Four of Cups sits in contemplative withdrawal, so focused on existing dissatisfaction that a new offering goes unnoticed. This card calls for honest reevaluation of what truly matters, while warning against the spiritual apathy that makes every gift seem inadequate."
+    },
+    "reversed": {
+      "keywords": ["awareness", "acceptance", "seizing opportunity", "renewed interest"],
+      "meaning": "Reversed, the Four of Cups signals an awakening from apathy — you are finally noticing the opportunities that have been offered and are ready to engage with life again. The period of withdrawal has served its purpose, and motivation is returning."
+    },
+    "symbolism": "A figure sits beneath a tree with crossed arms, staring at three cups while a mysterious hand extends a fourth cup from a cloud. The closed posture represents emotional withdrawal, and the unnoticed fourth cup symbolizes the blessings we miss when lost in discontent.",
+    "glyph": "Three cup shapes in a row at ground level with a fourth cup shape hovering above and to the side, separated by a gap"
+  },
+  {
+    "id": "five-of-cups",
+    "number": 5,
+    "name": "Five of Cups",
+    "nameZh": "圣杯五",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["grief", "loss", "regret", "disappointment", "mourning"],
+      "meaning": "The Five of Cups mourns over what has been spilled, consumed by grief and regret over a painful loss. Yet two cups still stand behind — this card reminds you that even in sorrow, something remains, and healing begins when you can turn toward what survives."
+    },
+    "reversed": {
+      "keywords": ["acceptance", "moving on", "finding peace", "recovery"],
+      "meaning": "Reversed, the Five of Cups signals the turning point in grief — you are beginning to accept the loss and notice the cups that still stand. The process of emotional recovery is underway, and you are finding the strength to look forward rather than back."
+    },
+    "symbolism": "A cloaked figure stands with bowed head before three overturned cups while two upright cups stand behind, unnoticed. The river and bridge in the background represent the emotional crossing that awaits once mourning gives way to acceptance.",
+    "glyph": "Three cup shapes tilted and spilling downward, with two smaller upright cup shapes standing behind them"
+  },
+  {
+    "id": "six-of-cups",
+    "number": 6,
+    "name": "Six of Cups",
+    "nameZh": "圣杯六",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["nostalgia", "innocence", "childhood memories", "generosity", "reunion"],
+      "meaning": "The Six of Cups evokes the sweet warmth of cherished memories and the innocence of childhood. This card may signal a reunion with someone from your past, an act of simple generosity, or a need to reconnect with the uncomplicated joy you once knew."
+    },
+    "reversed": {
+      "keywords": ["living in the past", "unrealistic nostalgia", "stuck", "moving forward"],
+      "meaning": "Reversed, the Six of Cups warns against being trapped in nostalgia or idealizing a past that was not as golden as memory paints it. It is time to release sentimental attachments that prevent you from fully inhabiting the present."
+    },
+    "symbolism": "A child offers a cup filled with flowers to a smaller child in a garden setting, representing the gift of innocent joy and uncomplicated love. The six cups overflowing with blossoms symbolize the richness of emotional memories and the beauty of simple giving.",
+    "glyph": "Six cup shapes arranged in two rows of three, each containing a small five-petaled flower shape"
+  },
+  {
+    "id": "seven-of-cups",
+    "number": 7,
+    "name": "Seven of Cups",
+    "nameZh": "圣杯七",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["illusion", "fantasy", "choices", "wishful thinking", "imagination"],
+      "meaning": "The Seven of Cups presents a dazzling array of possibilities floating in clouds of fantasy and imagination. This card warns that not all that glitters is gold — some options are illusions, and discernment is needed to choose the one vision worth pursuing."
+    },
+    "reversed": {
+      "keywords": ["clarity", "focus", "determination", "making a choice"],
+      "meaning": "Reversed, the Seven of Cups signals the clearing of illusions and a return to practical focus. You are cutting through fantasy and wishful thinking to identify what you truly want, ready to commit to a single path with clear-eyed determination."
+    },
+    "symbolism": "A silhouetted figure gazes upward at seven cups floating in clouds, each containing a different vision — treasure, a wreathed figure, a serpent, a castle, jewels, a dragon, and a veiled mystery. The clouds reveal that these are dreams, not yet realities.",
+    "glyph": "Seven cup shapes floating at various heights within a cloud-like oval border, each containing a different tiny geometric symbol"
+  },
+  {
+    "id": "eight-of-cups",
+    "number": 8,
+    "name": "Eight of Cups",
+    "nameZh": "圣杯八",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["departure", "withdrawal", "seeking deeper meaning", "letting go"],
+      "meaning": "The Eight of Cups walks away from what once brought fulfillment, seeking something deeper and more meaningful. This card signals a courageous departure — leaving behind emotional comfort in pursuit of spiritual growth and a truer path."
+    },
+    "reversed": {
+      "keywords": ["fear of change", "clinging", "avoidance", "stagnation"],
+      "meaning": "Reversed, the Eight of Cups suggests you know you need to leave a situation but cannot bring yourself to walk away. Fear of the unknown, emotional attachment, or a hope that things will improve keeps you rooted in a place you have outgrown."
+    },
+    "symbolism": "A figure walks away from eight neatly stacked cups under a crescent moon, heading toward distant mountains. The gap in the cups' arrangement shows that something is already missing, and the moonlit path represents the soul's journey guided by intuition rather than reason.",
+    "glyph": "Eight cup shapes stacked in two rows with a visible gap, and a curved path line leading away from them toward a crescent"
+  },
+  {
+    "id": "nine-of-cups",
+    "number": 9,
+    "name": "Nine of Cups",
+    "nameZh": "圣杯九",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["contentment", "satisfaction", "wish fulfilled", "gratitude", "pleasure"],
+      "meaning": "The Nine of Cups is the wish card — a moment of deep emotional satisfaction when desires are fulfilled and contentment radiates from within. This card celebrates the pleasure of having what you need, encouraging gratitude for life's abundant blessings."
+    },
+    "reversed": {
+      "keywords": ["dissatisfaction", "greed", "materialism", "unfulfilled wishes"],
+      "meaning": "Reversed, the Nine of Cups warns that getting what you wished for has not brought the happiness you expected. Dissatisfaction lingers despite material abundance, suggesting that deeper emotional or spiritual needs remain unaddressed."
+    },
+    "symbolism": "A well-fed figure sits contentedly before nine cups arranged in an arc, arms crossed in satisfaction. The curved display of cups represents wishes manifested and emotional abundance, while the figure's posture embodies the quiet pleasure of fulfillment.",
+    "glyph": "Nine cup shapes arranged in a broad arc or smile-like curve, with a small contented circle-figure beneath"
+  },
+  {
+    "id": "ten-of-cups",
+    "number": 10,
+    "name": "Ten of Cups",
+    "nameZh": "圣杯十",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["harmony", "family", "emotional fulfillment", "happiness", "alignment"],
+      "meaning": "The Ten of Cups is the card of lasting emotional fulfillment — the rainbow after the storm. It represents the deep joy of family harmony, enduring love, and the rare blessing of a life where your heart's truest desires have been realized."
+    },
+    "reversed": {
+      "keywords": ["broken home", "disharmony", "misaligned values", "family conflict"],
+      "meaning": "Reversed, the Ten of Cups reveals cracks in the domestic ideal — family conflicts, broken commitments, or a home life that falls short of your dreams. The rainbow vision of perfect happiness may be an unrealistic standard causing real-world disappointment."
+    },
+    "symbolism": "A couple stands with arms raised in joy while children play beside them, and a rainbow of ten cups arches across the sky above their home. The rainbow represents the covenant of emotional fulfillment, and the idyllic scene depicts the culmination of love's journey.",
+    "glyph": "Ten cup shapes arranged in a rainbow arc across the top, with a simple house shape and two small figure outlines below"
+  },
+  {
+    "id": "page-of-cups",
+    "number": 11,
+    "name": "Page of Cups",
+    "nameZh": "圣杯侍从",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["creative inspiration", "intuitive messages", "curiosity", "possibility"],
+      "meaning": "The Page of Cups arrives with a surprising emotional or creative message, approaching life with open-hearted wonder. This card signals the stirring of intuition, the beginning of a creative project, or an unexpected emotional opportunity that invites playful exploration."
+    },
+    "reversed": {
+      "keywords": ["emotional immaturity", "escapism", "creative block", "oversensitivity"],
+      "meaning": "Reversed, the Page of Cups suggests emotional immaturity, creative blockage, or a retreat into fantasy to avoid dealing with real feelings. Oversensitivity may be making it difficult to engage with the world without being overwhelmed."
+    },
+    "symbolism": "A young figure in floral attire gazes with wonder at a fish emerging from a golden cup. The fish represents the surprising messages that surface from the depths of the unconscious — unexpected, sometimes whimsical gifts from the emotional realm.",
+    "glyph": "A cup shape with a small fish silhouette leaping upward from within it, surrounded by tiny bubble circles"
+  },
+  {
+    "id": "knight-of-cups",
+    "number": 12,
+    "name": "Knight of Cups",
+    "nameZh": "圣杯骑士",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["romance", "charm", "imagination", "following the heart", "idealism"],
+      "meaning": "The Knight of Cups rides forth as the romantic idealist, guided by the heart's vision and moved by beauty, art, and deep feeling. This card signals the arrival of an emotional proposal, a creative invitation, or the courage to follow your heart's truest desire."
+    },
+    "reversed": {
+      "keywords": ["moodiness", "unrealistic expectations", "jealousy", "deception"],
+      "meaning": "Reversed, the Knight of Cups becomes the brooding romantic whose idealism turns to moodiness and whose charm masks manipulation. Unrealistic expectations, emotional volatility, or romantic deception may be undermining genuine connection."
+    },
+    "symbolism": "A knight in winged armor rides slowly on a calm horse, holding a cup forward as if bearing a sacred offering. The river he crosses represents the emotional journey, and the winged helmet symbolizes imagination in service of the heart's quest.",
+    "glyph": "A cup shape held forward on a horizontal line suggesting a rider's extended arm, with small wing shapes on either side"
+  },
+  {
+    "id": "queen-of-cups",
+    "number": 13,
+    "name": "Queen of Cups",
+    "nameZh": "圣杯王后",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["compassion", "emotional depth", "intuition", "nurturing", "empathy"],
+      "meaning": "The Queen of Cups embodies deep emotional intelligence and the compassionate wisdom of one who understands the language of the heart. She nurtures others with genuine empathy while maintaining her own emotional depth, trusting intuition as her truest guide."
+    },
+    "reversed": {
+      "keywords": ["emotional manipulation", "codependency", "martyrdom", "insecurity"],
+      "meaning": "Reversed, the Queen of Cups loses herself in others' emotions or uses emotional sensitivity as a tool for manipulation. Codependency, martyrdom, or an inability to maintain healthy boundaries may be drowning her in feelings that are not her own."
+    },
+    "symbolism": "A queen sits at the water's edge on an ornate throne, gazing into a closed, elaborately decorated cup. The sealed cup represents emotions held with reverence, the water at her feet connects her to the unconscious, and the cherub carvings honor love's sacred nature.",
+    "glyph": "An ornate cup shape with a closed lid, flanked by flowing wave-like curves suggesting water and emotional depth"
+  },
+  {
+    "id": "king-of-cups",
+    "number": 14,
+    "name": "King of Cups",
+    "nameZh": "圣杯国王",
+    "arcana": "minor",
+    "suit": "cups",
+    "element": "water",
+    "upright": {
+      "keywords": ["emotional maturity", "diplomacy", "balance", "wisdom", "calm"],
+      "meaning": "The King of Cups masters the emotional realm with quiet authority, balancing deep feeling with measured wisdom. He leads with compassion and diplomacy, demonstrating that true emotional strength lies in understanding and channeling feelings rather than being ruled by them."
+    },
+    "reversed": {
+      "keywords": ["emotional manipulation", "volatility", "coldness", "repression"],
+      "meaning": "Reversed, the King of Cups becomes either emotionally volatile or icily detached — losing the balanced mastery that defines his strength. He may use his understanding of emotions to manipulate others, or may have suppressed his feelings to the point of numbness."
+    },
+    "symbolism": "A king sits on a stone throne amid turbulent seas, yet remains perfectly composed. A fish amulet and a ship in the background represent his connection to the emotional depths and his ability to navigate storms through steady wisdom rather than force.",
+    "glyph": "A cup shape resting on a stone-like rectangular base, with turbulent wave lines on either side held in check by the stable center"
+  },
+  {
+    "id": "ace-of-swords",
+    "number": 1,
+    "name": "Ace of Swords",
+    "nameZh": "宝剑一",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["clarity", "breakthrough", "truth", "new idea", "mental force"],
+      "meaning": "The Ace of Swords cuts through confusion with the sharp clarity of pure truth. A breakthrough idea, a moment of mental clarity, or a decisive realization is at hand — wield this power of insight with precision and integrity."
+    },
+    "reversed": {
+      "keywords": ["confusion", "misinformation", "brutality", "clouded judgment"],
+      "meaning": "Reversed, the Ace of Swords warns of mental confusion, communication failures, or the misuse of intellectual power. The sword of truth may be wielded cruelly or inaccurately, cutting where it should not or failing to cut where it must."
+    },
+    "symbolism": "A hand emerges from a cloud gripping an upright sword crowned with a wreath and laurels. The crown represents the victory of clear thought, and the mountain peak visible through the clouds symbolizes the heights that truth and reason can attain.",
+    "glyph": "A single upward-pointing triangle bisected by a vertical line, with a small wreath circle at the apex"
+  },
+  {
+    "id": "two-of-swords",
+    "number": 2,
+    "name": "Two of Swords",
+    "nameZh": "宝剑二",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["indecision", "stalemate", "difficult choices", "avoidance", "blocked emotions"],
+      "meaning": "The Two of Swords holds two opposing options in perfect, painful balance while refusing to look at either directly. This card signals a difficult decision that cannot be avoided forever — the blindfold must come off and a choice must be made."
+    },
+    "reversed": {
+      "keywords": ["information overload", "overthinking", "clarity emerging", "decision made"],
+      "meaning": "Reversed, the Two of Swords indicates that the impasse is breaking — either through forced circumstances or a willingness to finally face the truth. The blindfold is coming off, and while the clarity may be uncomfortable, it enables forward movement."
+    },
+    "symbolism": "A blindfolded figure sits before a moonlit sea, holding two crossed swords in perfect balance. The blindfold represents willful avoidance of truth, the crossed swords show the tension of opposing options, and the sea behind holds the submerged emotions being denied.",
+    "glyph": "Two diagonal lines crossing to form an X, with a horizontal blindfold-like band across the intersection point"
+  },
+  {
+    "id": "three-of-swords",
+    "number": 3,
+    "name": "Three of Swords",
+    "nameZh": "宝剑三",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["heartbreak", "sorrow", "grief", "pain", "separation"],
+      "meaning": "The Three of Swords pierces the heart with the sharp pain of betrayal, loss, or devastating truth. This card does not sugarcoat suffering — it acknowledges that some truths wound deeply, and that grief must be felt fully before healing can begin."
+    },
+    "reversed": {
+      "keywords": ["healing", "forgiveness", "releasing pain", "recovery"],
+      "meaning": "Reversed, the Three of Swords signals the beginning of emotional recovery and the slow withdrawal of pain's blade. Forgiveness — of self or others — is becoming possible, and the heart is beginning to mend through acceptance and the passage of time."
+    },
+    "symbolism": "Three swords pierce a red heart against a backdrop of rain and storm clouds. The image is starkly direct: emotional pain caused by harsh truths or betrayal. The rain represents the tears that must fall before the storm can clear.",
+    "glyph": "A heart shape pierced by three converging lines from different angles, with small droplet shapes falling below"
+  },
+  {
+    "id": "four-of-swords",
+    "number": 4,
+    "name": "Four of Swords",
+    "nameZh": "宝剑四",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["rest", "recovery", "contemplation", "solitude", "restoration"],
+      "meaning": "The Four of Swords commands a period of rest and mental recovery after a time of conflict or stress. This is not defeat but strategic withdrawal — your mind needs stillness to heal, and the best preparation for the next battle is quality restoration."
+    },
+    "reversed": {
+      "keywords": ["restlessness", "burnout", "premature action", "refusing rest"],
+      "meaning": "Reversed, the Four of Swords warns of restlessness and a refusal to give yourself the rest you desperately need. You may be rushing back into action before fully recovering, risking burnout and diminished effectiveness in the conflicts ahead."
+    },
+    "symbolism": "A figure lies in repose on a tomb, hands folded in prayer, while three swords hang above and one lies beneath. The church setting represents sanctuary, and the stained glass window depicts a scene of blessing — recovery comes through surrendering to stillness.",
+    "glyph": "A horizontal rectangle with three short vertical lines above it and one beneath, suggesting a figure at rest with swords suspended"
+  },
+  {
+    "id": "five-of-swords",
+    "number": 5,
+    "name": "Five of Swords",
+    "nameZh": "宝剑五",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["conflict", "defeat", "winning at a cost", "betrayal", "loss"],
+      "meaning": "The Five of Swords reveals a victory that comes at too high a cost — winning the battle but losing something far more valuable. This card warns of conflicts where ambition overrides integrity, and triumph leaves only bitterness and broken relationships."
+    },
+    "reversed": {
+      "keywords": ["reconciliation", "making amends", "moving on", "forgiveness"],
+      "meaning": "Reversed, the Five of Swords signals a willingness to lay down arms and seek reconciliation after a damaging conflict. It may be time to swallow pride, make amends, and learn from the destructive pattern of winning at others' expense."
+    },
+    "symbolism": "A smirking figure holds three captured swords while two defeated opponents walk away in dejection. The stormy sky and scattered swords on the ground reveal that this victory is hollow — what was gained through ruthlessness cannot compensate for what was lost.",
+    "glyph": "Three upward lines clustered together and two shorter lines angled away and downward, creating a sense of separation and defeat"
+  },
+  {
+    "id": "six-of-swords",
+    "number": 6,
+    "name": "Six of Swords",
+    "nameZh": "宝剑六",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["transition", "moving on", "mental relief", "healing journey"],
+      "meaning": "The Six of Swords carries you across troubled waters toward calmer shores. This card signals a necessary transition away from difficulty — the journey may be somber, but you are moving toward peace, and the worst of the storm is behind you."
+    },
+    "reversed": {
+      "keywords": ["resistance to transition", "unfinished business", "stuck", "returning to problems"],
+      "meaning": "Reversed, the Six of Swords suggests difficulty completing a necessary transition or being pulled back into a situation you tried to leave. Unfinished emotional business may be weighing down the boat, preventing smooth passage to calmer waters."
+    },
+    "symbolism": "A cloaked figure and child are ferried across water by a boatman, with six swords planted in the bow. The rough water behind and calm water ahead mark the transition from turbulence to peace, while the swords carried along represent lessons that travel with you.",
+    "glyph": "Six vertical lines planted in the front of a simple boat shape, with wavy lines transitioning from rough on one side to smooth on the other"
+  },
+  {
+    "id": "seven-of-swords",
+    "number": 7,
+    "name": "Seven of Swords",
+    "nameZh": "宝剑七",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["deception", "strategy", "stealth", "cunning", "resourcefulness"],
+      "meaning": "The Seven of Swords acts with cunning strategy, taking what is needed through cleverness rather than direct confrontation. This card may signal necessary tactical thinking, but it also warns of deception — either your own or someone else's underhanded behavior."
+    },
+    "reversed": {
+      "keywords": ["confession", "coming clean", "getting caught", "conscience"],
+      "meaning": "Reversed, the Seven of Swords indicates that deceptions are unraveling and the truth is coming out. Whether through confession or discovery, the sneaky approach is failing, and honesty — however uncomfortable — becomes the only viable path forward."
+    },
+    "symbolism": "A figure tiptoes away from a camp carrying five swords while two remain behind, looking back with a sly grin. The scene captures the essence of strategic theft or clever avoidance — getting away with something, but not everything, and not without risk.",
+    "glyph": "Five diagonal lines angled as if being carried, with two vertical lines standing apart behind them, and a dotted sneaking-path below"
+  },
+  {
+    "id": "eight-of-swords",
+    "number": 8,
+    "name": "Eight of Swords",
+    "nameZh": "宝剑八",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["restriction", "imprisonment", "powerlessness", "self-limitation", "victim mentality"],
+      "meaning": "The Eight of Swords shows a mind trapped by its own fears and limiting beliefs. Though surrounded by swords, the bonds are loose and the prison is of your own making — this card reveals that the greatest obstacles to freedom exist between your ears."
+    },
+    "reversed": {
+      "keywords": ["liberation", "self-acceptance", "new perspective", "empowerment"],
+      "meaning": "Reversed, the Eight of Swords signals the moment of liberation when you realize your prison was an illusion. The blindfold is coming off, the bonds are loosening, and you are reclaiming the power you gave away to fear and negative thinking."
+    },
+    "symbolism": "A blindfolded and loosely bound figure stands surrounded by eight swords planted in muddy ground. The water pooling at her feet and the castle on the distant cliff represent the emotions that trap and the security that seems unreachable — yet the bindings can be slipped.",
+    "glyph": "Eight vertical lines forming a cage-like enclosure around a small central circle, with the lines not quite touching at the top, leaving an opening"
+  },
+  {
+    "id": "nine-of-swords",
+    "number": 9,
+    "name": "Nine of Swords",
+    "nameZh": "宝剑九",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["anxiety", "nightmares", "despair", "worry", "mental anguish"],
+      "meaning": "The Nine of Swords depicts the dark night of the soul — the 3 a.m. torment of anxiety, guilt, and catastrophic thinking. This card acknowledges genuine mental suffering while gently suggesting that the fears haunting you may be worse in your mind than in reality."
+    },
+    "reversed": {
+      "keywords": ["hope", "recovery", "reaching out", "releasing worry"],
+      "meaning": "Reversed, the Nine of Swords signals the breaking of an anxiety cycle and the first rays of hope after a dark period. You are beginning to release the grip of worry, reach out for help, or recognize that your worst fears are unlikely to manifest."
+    },
+    "symbolism": "A figure sits upright in bed, head in hands, while nine swords hang on the dark wall behind. The quilt is patterned with roses and zodiac signs — beauty and cosmic order exist even in the depths of despair, and the darkness is a state of mind, not a permanent reality.",
+    "glyph": "Nine horizontal lines stacked like a wall behind a small hunched figure shape, with three tiny star dots suggesting the pre-dawn hour"
+  },
+  {
+    "id": "ten-of-swords",
+    "number": 10,
+    "name": "Ten of Swords",
+    "nameZh": "宝剑十",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["painful ending", "rock bottom", "betrayal", "loss", "crisis"],
+      "meaning": "The Ten of Swords marks the absolute bottom — a painful, dramatic ending that leaves no room for denial. Yet this very finality is the seed of renewal: when you have hit the lowest point, the only direction remaining is up. The dawn on the horizon promises rebirth."
+    },
+    "reversed": {
+      "keywords": ["recovery", "regeneration", "inevitable end", "resisting the inevitable"],
+      "meaning": "Reversed, the Ten of Swords suggests either the beginning of recovery from a devastating blow or a refusal to accept that something has ended. The pain is lessening, but you must fully release the past before regeneration can truly begin."
+    },
+    "symbolism": "A figure lies face-down with ten swords in the back, yet the sky shows golden dawn breaking over calm waters. The scene is deliberately dramatic — the worst has already happened, and the sunrise signals that even total defeat gives way to a new day.",
+    "glyph": "Ten short lines radiating downward into a horizontal plane, with a thin golden arc of sunrise along the bottom edge"
+  },
+  {
+    "id": "page-of-swords",
+    "number": 11,
+    "name": "Page of Swords",
+    "nameZh": "宝剑侍从",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["curiosity", "mental agility", "new ideas", "communication", "vigilance"],
+      "meaning": "The Page of Swords buzzes with intellectual curiosity and a sharp, questioning mind that wants to understand everything. This card signals new ideas, important communications, and the mental energy of someone who is always watching, learning, and ready to speak truth."
+    },
+    "reversed": {
+      "keywords": ["gossip", "deception", "all talk", "cynicism"],
+      "meaning": "Reversed, the Page of Swords warns of gossip, mental dishonesty, or intellectual arrogance without substance. Sharp words may be used to wound rather than illuminate, and the curiosity that should drive learning may have devolved into nosiness or cynicism."
+    },
+    "symbolism": "A young figure stands on uneven ground holding a sword aloft while wind whips through the sky. The turbulent clouds and vigilant stance represent a keen, restless mind always alert to new information, while the uneven ground shows the instability of pure intellect without grounding.",
+    "glyph": "A small upward-pointing sword shape with curling wind-lines spiraling around it"
+  },
+  {
+    "id": "knight-of-swords",
+    "number": 12,
+    "name": "Knight of Swords",
+    "nameZh": "宝剑骑士",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["ambition", "decisive action", "speed", "intellect", "determination"],
+      "meaning": "The Knight of Swords charges into battle with singular intellectual focus and unstoppable determination. This card signals a time for swift, decisive action driven by a clear vision — cut through obstacles with the sharp edge of intelligence and unrelenting will."
+    },
+    "reversed": {
+      "keywords": ["recklessness", "arrogance", "tactlessness", "burnout"],
+      "meaning": "Reversed, the Knight of Swords becomes dangerously reckless — charging forward without considering consequences, wielding intellect as a weapon, and leaving destruction in the wake of heedless ambition. Speed without wisdom leads to costly crashes."
+    },
+    "symbolism": "A knight on a charging horse gallops into a storm, sword raised high, with birds scattering before the onslaught. The wind-torn clouds and the horse's full gallop convey the unstoppable momentum of a mind in full attack, for better or worse.",
+    "glyph": "A sharp forward-leaning diagonal line with a pointed tip, trailing speed-lines behind, suggesting a charging lance"
+  },
+  {
+    "id": "queen-of-swords",
+    "number": 13,
+    "name": "Queen of Swords",
+    "nameZh": "宝剑王后",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["perception", "clear boundaries", "direct communication", "independence", "wisdom"],
+      "meaning": "The Queen of Swords sees through pretense with unflinching clarity and communicates truth with precision. She embodies intellectual independence, sharp perception, and the wisdom that comes from having endured loss — her boundaries are firm because she knows their value."
+    },
+    "reversed": {
+      "keywords": ["cruelty", "coldness", "bitterness", "overly critical"],
+      "meaning": "Reversed, the Queen of Swords becomes bitter, cold, and unnecessarily cruel in her communication. Her clarity curdles into criticism, her independence into isolation, and her firm boundaries into walls that keep out warmth as well as harm."
+    },
+    "symbolism": "A queen sits on a cloud-carved throne holding a sword upright in one hand while the other extends in a gesture of discernment. The butterflies and the single bird on her crown represent the transformation of sorrow into wisdom through clear-eyed acceptance.",
+    "glyph": "A vertical sword line with a butterfly-wing shape on one side and a clean horizontal line extending from the other, suggesting balanced precision"
+  },
+  {
+    "id": "king-of-swords",
+    "number": 14,
+    "name": "King of Swords",
+    "nameZh": "宝剑国王",
+    "arcana": "minor",
+    "suit": "swords",
+    "element": "air",
+    "upright": {
+      "keywords": ["authority", "clear thinking", "intellectual power", "justice", "truth"],
+      "meaning": "The King of Swords rules through the power of rational thought, ethical judgment, and absolute commitment to truth. He represents the highest expression of intellectual authority — fair, clear-headed, and willing to make difficult decisions based on principle rather than emotion."
+    },
+    "reversed": {
+      "keywords": ["manipulation", "abuse of power", "tyranny of logic", "cold calculation"],
+      "meaning": "Reversed, the King of Swords uses his formidable intellect for manipulation and domination. Logic becomes a weapon, authority becomes tyranny, and the pursuit of truth gives way to the imposition of self-serving narratives dressed in the language of reason."
+    },
+    "symbolism": "A stern king holds an upright sword slightly tilted, sitting on a throne carved with butterflies and sylphs — air spirits. The clear sky and the clouds at his back represent the heights of rational clarity, while the tilted sword suggests that even justice requires nuance.",
+    "glyph": "A vertical sword line topped with a small crown, flanked by two symmetric cloud-like scrollwork curves"
+  },
+  {
+    "id": "ace-of-pentacles",
+    "number": 1,
+    "name": "Ace of Pentacles",
+    "nameZh": "星币一",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["new opportunity", "prosperity", "manifestation", "abundance"],
+      "meaning": "The Ace of Pentacles offers a golden opportunity for material prosperity and tangible new beginnings. This card signals the seed of financial growth, a promising venture, or the manifestation of something real and lasting — tend it with patience and practical wisdom."
+    },
+    "reversed": {
+      "keywords": ["missed opportunity", "scarcity mindset", "poor planning", "instability"],
+      "meaning": "Reversed, the Ace of Pentacles warns of a missed financial opportunity or a promising venture that fails to materialize due to poor planning. A scarcity mindset may be preventing you from recognizing or seizing the abundance being offered."
+    },
+    "symbolism": "A hand emerges from a cloud offering a golden pentacle above a lush garden with an archway of flowers leading to distant mountains. The garden represents cultivated prosperity, the pentacle is the seed of material blessing, and the mountain path shows the long road of patient growth.",
+    "glyph": "A circle enclosing a five-pointed star, resting in the center of an archway formed by two curved lines meeting at the top"
+  },
+  {
+    "id": "two-of-pentacles",
+    "number": 2,
+    "name": "Two of Pentacles",
+    "nameZh": "星币二",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["balance", "adaptability", "juggling priorities", "flexibility"],
+      "meaning": "The Two of Pentacles dances with the playful skill of a juggler keeping multiple priorities in motion. This card calls for adaptability, flexible time management, and the ability to maintain equilibrium even when life demands that you keep several balls in the air."
+    },
+    "reversed": {
+      "keywords": ["overwhelm", "disorganization", "imbalance", "overcommitment"],
+      "meaning": "Reversed, the Two of Pentacles warns that the juggling act is failing — too many commitments, poor time management, or financial imbalance is causing things to slip. Something must be put down before everything crashes."
+    },
+    "symbolism": "A figure dances while juggling two pentacles connected by an infinity-shaped ribbon, with ships riding waves in the background. The lemniscate connecting the pentacles shows the endless flow of give-and-take, while the waves remind us that balance is dynamic, not static.",
+    "glyph": "Two circles connected by a lemniscate (figure-eight) ribbon, with small wave patterns running beneath them"
+  },
+  {
+    "id": "three-of-pentacles",
+    "number": 3,
+    "name": "Three of Pentacles",
+    "nameZh": "星币三",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["teamwork", "craftsmanship", "collaboration", "skill", "building"],
+      "meaning": "The Three of Pentacles celebrates the power of skilled collaboration and the satisfaction of work done well. This card signals that combining diverse talents toward a shared vision produces results far greater than any individual could achieve alone."
+    },
+    "reversed": {
+      "keywords": ["poor teamwork", "lack of alignment", "mediocrity", "disorganization"],
+      "meaning": "Reversed, the Three of Pentacles indicates breakdowns in collaboration — misaligned goals, lack of respect for different skill sets, or work produced without care for quality. The project suffers when teamwork falters."
+    },
+    "symbolism": "Three figures — a craftsman, a monk, and an architect — consult together in a cathedral under construction, with three pentacles carved into an arch above them. The scene represents the union of skill, spirit, and vision required to build something of lasting value.",
+    "glyph": "Three circles arranged in a triangular arch formation, with three small figure-like lines beneath them in collaborative poses"
+  },
+  {
+    "id": "four-of-pentacles",
+    "number": 4,
+    "name": "Four of Pentacles",
+    "nameZh": "星币四",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["security", "conservation", "control", "stability", "possession"],
+      "meaning": "The Four of Pentacles grips tightly to what has been accumulated, prioritizing security and control above all else. This card speaks to the need for financial stability and boundaries, but warns that excessive attachment to material security can become its own prison."
+    },
+    "reversed": {
+      "keywords": ["generosity", "letting go", "financial insecurity", "reckless spending"],
+      "meaning": "Reversed, the Four of Pentacles suggests either a welcome release of excessive attachment to material security or a reckless disregard for financial stability. The tight grip is loosening — whether this brings freedom or chaos depends on the context."
+    },
+    "symbolism": "A figure sits clutching a pentacle to the chest, with one underfoot and one on each side of the head, maintaining total control over material possessions. The city behind is kept at a distance — security has been achieved, but at the cost of connection and generosity.",
+    "glyph": "Four circles positioned at the cardinal points around a central square, with inward-pointing arrows suggesting a tightening grip"
+  },
+  {
+    "id": "five-of-pentacles",
+    "number": 5,
+    "name": "Five of Pentacles",
+    "nameZh": "星币五",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["hardship", "loss", "poverty", "isolation", "worry"],
+      "meaning": "The Five of Pentacles speaks to the pain of material hardship and the isolation that financial or physical suffering can bring. Yet the lit window of the church above suggests that help and warmth are available — you need only look up and ask."
+    },
+    "reversed": {
+      "keywords": ["recovery", "improvement", "spiritual wealth", "finding help"],
+      "meaning": "Reversed, the Five of Pentacles signals the end of a difficult period and the beginning of recovery. Help arrives, circumstances improve, or you discover that spiritual and emotional wealth can sustain you even when material resources are scarce."
+    },
+    "symbolism": "Two impoverished figures trudge through snow past a lit stained-glass window depicting five pentacles. Their focus on the cold ground prevents them from seeing the warmth and sanctuary available just above — a metaphor for suffering that blinds us to available grace.",
+    "glyph": "Five circles arranged in the pattern of a church window, with two small bent-figure shapes passing below, separated from the circles by a horizontal line"
+  },
+  {
+    "id": "six-of-pentacles",
+    "number": 6,
+    "name": "Six of Pentacles",
+    "nameZh": "星币六",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["generosity", "charity", "sharing", "balance of resources", "giving and receiving"],
+      "meaning": "The Six of Pentacles embodies the harmonious flow of generosity between those who have and those who need. This card calls for gracious giving and humble receiving, reminding us that prosperity carries the responsibility to share and that accepting help requires its own kind of courage."
+    },
+    "reversed": {
+      "keywords": ["strings attached", "power imbalance", "debt", "selfishness"],
+      "meaning": "Reversed, the Six of Pentacles warns of generosity with strings attached, unequal power dynamics in financial relationships, or the manipulation that can come disguised as charity. Examine whether giving and receiving are truly balanced and freely offered."
+    },
+    "symbolism": "A wealthy merchant holds balanced scales in one hand while distributing coins to kneeling figures with the other. The scales represent the karmic balance of generosity, and the scene illustrates the sacred exchange between abundance and need.",
+    "glyph": "A balanced scale shape with three circles on each side, and small downward-flowing lines from the lower pan suggesting coins being distributed"
+  },
+  {
+    "id": "seven-of-pentacles",
+    "number": 7,
+    "name": "Seven of Pentacles",
+    "nameZh": "星币七",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["patience", "investment", "long-term vision", "assessment", "reward"],
+      "meaning": "The Seven of Pentacles pauses to evaluate the fruits of sustained effort, contemplating whether the investment of time and energy is yielding the desired results. This card encourages patient perseverance while also calling for honest assessment of your progress."
+    },
+    "reversed": {
+      "keywords": ["impatience", "wasted effort", "lack of results", "poor investment"],
+      "meaning": "Reversed, the Seven of Pentacles signals frustration with the slow pace of returns or the realization that a long-term investment may not pay off as hoped. Impatience threatens to undermine what patience has built, and a strategic reassessment may be necessary."
+    },
+    "symbolism": "A gardener leans on a hoe, gazing at a bush bearing six pentacles while a seventh rests at their feet. The cultivated plant represents investments tended over time, and the contemplative pause captures the moment of reckoning between effort expended and harvest gained.",
+    "glyph": "Six circles arranged like fruit on a branching vine pattern, with one circle resting below at the base"
+  },
+  {
+    "id": "eight-of-pentacles",
+    "number": 8,
+    "name": "Eight of Pentacles",
+    "nameZh": "星币八",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["diligence", "mastery", "skill development", "craftsmanship", "dedication"],
+      "meaning": "The Eight of Pentacles celebrates the dedicated practice that transforms raw talent into genuine mastery. This card signals a time for disciplined skill-building, attention to detail, and the deep satisfaction that comes from pouring yourself wholeheartedly into your craft."
+    },
+    "reversed": {
+      "keywords": ["perfectionism", "lack of focus", "shortcuts", "mediocrity"],
+      "meaning": "Reversed, the Eight of Pentacles warns of shortcuts that undermine quality, perfectionism that paralyzes productivity, or a lack of dedication to developing your skills. Without genuine engagement in the work, mastery remains forever out of reach."
+    },
+    "symbolism": "An artisan sits at a workbench carefully carving pentacles, with completed works displayed alongside. Each pentacle is more refined than the last, representing the incremental improvement that comes through repetition, focus, and loving dedication to one's craft.",
+    "glyph": "Eight circles arranged in a descending diagonal line, each slightly more detailed than the last, with a small chisel-shape at the bottom"
+  },
+  {
+    "id": "nine-of-pentacles",
+    "number": 9,
+    "name": "Nine of Pentacles",
+    "nameZh": "星币九",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["abundance", "self-sufficiency", "luxury", "independence", "refinement"],
+      "meaning": "The Nine of Pentacles stands in a garden of earned abundance, embodying the elegant self-sufficiency that comes from disciplined effort. This card celebrates financial independence, refined taste, and the quiet luxury of a life built through your own hands and wisdom."
+    },
+    "reversed": {
+      "keywords": ["overinvestment in work", "superficiality", "financial dependence", "setbacks"],
+      "meaning": "Reversed, the Nine of Pentacles warns that material success may be masking inner emptiness, or that the independence you enjoy is less secure than it appears. You may have sacrificed too much personal life for professional achievement, or luxury has become a trap."
+    },
+    "symbolism": "An elegantly robed figure stands in a vineyard laden with pentacles, a hooded falcon perched on one hand. The abundant garden represents the harvest of disciplined effort, the fine robes signal earned refinement, and the falcon embodies the disciplined intellect that achieved it all.",
+    "glyph": "Nine circles arranged in a three-by-three grid within a vine-bordered square, with a small bird silhouette perched to one side"
+  },
+  {
+    "id": "ten-of-pentacles",
+    "number": 10,
+    "name": "Ten of Pentacles",
+    "nameZh": "星币十",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["legacy", "wealth", "family", "inheritance", "long-term success"],
+      "meaning": "The Ten of Pentacles represents the culmination of material success — wealth that endures across generations, a stable family legacy, and the deep security that comes from building something that outlasts you. This card celebrates lasting prosperity and the roots of belonging."
+    },
+    "reversed": {
+      "keywords": ["financial failure", "family disputes", "loss of legacy", "instability"],
+      "meaning": "Reversed, the Ten of Pentacles warns of threats to family wealth, disputes over inheritance, or the collapse of what seemed like permanent security. Generational patterns of dysfunction may be undermining the material stability that took years to build."
+    },
+    "symbolism": "Three generations gather beneath an archway decorated with ten pentacles arranged in the pattern of the Tree of Life. The elder, the couple, and the child with their dogs represent the continuity of family, while the Tree of Life pattern connects material wealth to spiritual wholeness.",
+    "glyph": "Ten circles arranged in the Tree of Life pattern (one, two, one, two, one, two, one formation) within a pointed archway shape"
+  },
+  {
+    "id": "page-of-pentacles",
+    "number": 11,
+    "name": "Page of Pentacles",
+    "nameZh": "星币侍从",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["ambition", "studiousness", "new venture", "diligence", "practicality"],
+      "meaning": "The Page of Pentacles approaches a new venture with studious dedication and practical ambition. This card signals the beginning of a learning journey, a promising financial opportunity, or the earnest desire to build something real through hard work and careful study."
+    },
+    "reversed": {
+      "keywords": ["lack of progress", "procrastination", "unfocused", "missed opportunity"],
+      "meaning": "Reversed, the Page of Pentacles warns of procrastination, lack of follow-through, or a promising opportunity that remains stuck in the planning phase. Grand ambitions without practical action produce nothing, and study without application becomes mere distraction."
+    },
+    "symbolism": "A young figure stands in a green field gazing intently at a pentacle held carefully aloft. The lush landscape represents fertile potential, and the absorbed concentration on the single pentacle shows the focused dedication needed to transform dreams into tangible results.",
+    "glyph": "A single circle held aloft by two small upward-reaching lines, with a flat ground-line and small grass marks beneath"
+  },
+  {
+    "id": "knight-of-pentacles",
+    "number": 12,
+    "name": "Knight of Pentacles",
+    "nameZh": "星币骑士",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["reliability", "hard work", "methodical", "persistence", "responsibility"],
+      "meaning": "The Knight of Pentacles advances steadily with unshakeable reliability and methodical determination. This card represents the power of consistent effort, responsible stewardship, and the quiet heroism of showing up every day to do the work that matters."
+    },
+    "reversed": {
+      "keywords": ["stubbornness", "laziness", "boredom", "stagnation", "perfectionism"],
+      "meaning": "Reversed, the Knight of Pentacles becomes stuck in routine, stubbornly refusing to adapt or so mired in perfectionism that progress stalls entirely. The steady reliability has become plodding stagnation, and hard work has lost its sense of purpose."
+    },
+    "symbolism": "A knight on a heavy draft horse stands motionless in a plowed field, patiently studying a pentacle. Unlike other knights who charge, this one stands still — demonstrating that true progress sometimes requires patience, careful observation, and methodical planning before action.",
+    "glyph": "A circle resting on a wide horizontal base with a thick vertical line beneath, suggesting a sturdy, grounded stance that will not be moved"
+  },
+  {
+    "id": "queen-of-pentacles",
+    "number": 13,
+    "name": "Queen of Pentacles",
+    "nameZh": "星币王后",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["nurturing", "abundance", "practicality", "security", "generosity"],
+      "meaning": "The Queen of Pentacles creates a warm, abundant home through practical wisdom and generous stewardship of resources. She embodies the ability to nurture both people and finances, creating material security without losing touch with the earthy pleasures of life."
+    },
+    "reversed": {
+      "keywords": ["financial insecurity", "neglect", "smothering", "work-life imbalance"],
+      "meaning": "Reversed, the Queen of Pentacles may be neglecting home life for career or vice versa, smothering loved ones with material care while ignoring emotional needs. Financial anxiety or an unhealthy relationship with money may be disrupting her natural generosity."
+    },
+    "symbolism": "A queen sits in a flourishing garden on a throne carved with fruit and earth spirits, holding a pentacle in her lap as she would hold a child. The rabbit at her feet symbolizes fertility and abundance, while the roses around her represent beauty cultivated through care.",
+    "glyph": "A circle cradled in a U-shaped curve like cupped hands, surrounded by small organic leaf and petal shapes"
+  },
+  {
+    "id": "king-of-pentacles",
+    "number": 14,
+    "name": "King of Pentacles",
+    "nameZh": "星币国王",
+    "arcana": "minor",
+    "suit": "pentacles",
+    "element": "earth",
+    "upright": {
+      "keywords": ["wealth", "business acumen", "security", "discipline", "abundance"],
+      "meaning": "The King of Pentacles has built an empire of material success through disciplined effort, shrewd judgment, and patient accumulation. He represents the pinnacle of worldly achievement — reliable, prosperous, and generous with the abundance his wisdom has created."
+    },
+    "reversed": {
+      "keywords": ["greed", "materialism", "financial mismanagement", "corruption"],
+      "meaning": "Reversed, the King of Pentacles becomes consumed by greed, valuing wealth above all else and losing his moral compass in the pursuit of ever more. Financial mismanagement, corruption, or the hollow emptiness of materialism without meaning may be present."
+    },
+    "symbolism": "A richly robed king sits on a throne adorned with bull carvings, surrounded by grapevines and holding a scepter and pentacle. His castle and flourishing gardens visible behind him represent the stable empire built through patient mastery of the material world.",
+    "glyph": "A circle with a pentagram inscribed, resting on a wide throne-like rectangular base with bull-horn curves at the top corners"
+  }
+]
