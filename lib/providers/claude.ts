@@ -35,7 +35,10 @@ export class ClaudeProvider implements LLMProvider {
   }
 
   async chatStructured<T>(params: StructuredChatParams<T>): Promise<T> {
-    const { systemMessage, userMessages } = this.splitMessages(params.messages);
+    const { systemMessage, userMessages } = this.splitMessages([
+      ...params.messages,
+      { role: "user" as const, content: "只输出JSON。" },
+    ]);
 
     const response = await this.client.messages.create({
       model: params.model ?? this.defaultModel,

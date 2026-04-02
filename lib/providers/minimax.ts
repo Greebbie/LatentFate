@@ -42,10 +42,13 @@ export class MiniMaxProvider implements LLMProvider {
       max_tokens: 16384,
       temperature: params.temperature ?? 0.7,
       response_format: { type: "json_object" },
-      messages: params.messages.map((msg) => ({
-        role: msg.role as "system" | "user" | "assistant",
-        content: msg.content,
-      })),
+      messages: [
+        ...params.messages.map((msg) => ({
+          role: msg.role as "system" | "user" | "assistant",
+          content: msg.content,
+        })),
+        { role: "user" as const, content: "只输出JSON。" },
+      ],
     });
 
     const content = response.choices[0]?.message?.content ?? "{}";

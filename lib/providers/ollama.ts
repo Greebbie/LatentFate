@@ -68,12 +68,15 @@ export class OllamaProvider implements LLMProvider {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: params.model ?? this.defaultModel,
-        messages: params.messages.map(
-          (msg): OllamaMessage => ({
-            role: msg.role,
-            content: msg.content,
-          })
-        ),
+        messages: [
+          ...params.messages.map(
+            (msg): OllamaMessage => ({
+              role: msg.role,
+              content: msg.content,
+            })
+          ),
+          { role: "user", content: "只输出JSON。" },
+        ],
         stream: false,
         format: "json",
         options: {

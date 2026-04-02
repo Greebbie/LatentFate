@@ -3,6 +3,8 @@ import type { DrawnCard } from "@/lib/tarot/types";
 import { readingResultSchema, type ReadingResult } from "./schemas";
 import { buildReadingPrompt } from "./prompts";
 
+const MAX_ATTEMPTS = 2;
+
 export interface ReadingInput {
   question: string;
   background?: string;
@@ -20,14 +22,27 @@ export async function performReading(
     input.cards
   );
 
-  return provider.chatStructured({
-    messages: [
-      { role: "system", content: system },
-      { role: "user", content: user },
-    ],
-    schema: readingResultSchema,
-    schemaName: "ReadingResult",
-    model,
-    temperature: 0.8,
-  });
+  let lastError: unknown;
+
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+    try {
+      return await provider.chatStructured({
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+        schema: readingResultSchema,
+        schemaName: "ReadingResult",
+        model,
+        temperature: 0.8 - attempt * 0.2,
+      });
+    } catch (error: unknown) {
+      lastError = error;
+      if (attempt === MAX_ATTEMPTS - 1) {
+        throw error;
+      }
+    }
+  }
+
+  throw lastError;
 }
