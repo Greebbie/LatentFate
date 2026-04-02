@@ -22,7 +22,7 @@ LatentFate 把塔罗当作符号输入接口，做了一件很自然的事：采
 > *Results are projections, not prophecies.*
 
 ---
-
+### I highly recommand Minimax M2.7 for trying :) 
 ## What It Does
 
 ### Reading — 状态诊断
