@@ -45,14 +45,19 @@ export class ClaudeProvider implements LLMProvider {
       messages: userMessages,
     });
 
-    if (response.stop_reason === "max_tokens") {
-      throw new TruncatedResponseError("max_tokens");
-    }
-
     const textBlock = response.content.find((block) => block.type === "text");
     const rawResponse = textBlock?.text ?? "{}";
-    const parsed = extractJSON(rawResponse);
-    return params.schema.parse(parsed);
+    const truncated = response.stop_reason === "max_tokens";
+
+    try {
+      const parsed = extractJSON(rawResponse);
+      return params.schema.parse(parsed);
+    } catch (parseError) {
+      if (truncated) {
+        throw new TruncatedResponseError("max_tokens");
+      }
+      throw parseError;
+    }
   }
 
   private splitMessages(messages: Message[]): {

@@ -49,10 +49,9 @@ function repairTruncatedJSON(text: string): unknown | null {
 
   let json = text.slice(start);
 
-  // Step 1: Handle unclosed strings
+  // Step 1: Handle unclosed strings (odd number of unescaped quotes)
   const quoteCount = (json.match(/(?<!\\)"/g) || []).length;
   if (quoteCount % 2 !== 0) {
-    // We're inside an unclosed string — find the last opening quote
     const lastQuote = json.lastIndexOf('"');
     const beforeQuote = json.slice(0, lastQuote).trimEnd();
 
@@ -63,18 +62,30 @@ function repairTruncatedJSON(text: string): unknown | null {
       // Truncated inside an array element or after comma
       json = json.slice(0, lastQuote).replace(/,?\s*$/, "");
     } else {
-      // Mid-string truncation — close the string
-      json = json + '"';
+      // Mid-string truncation — strip trailing backslashes to avoid creating \"
+      let truncated = json;
+      const trailingBackslashes = truncated.match(/\\+$/);
+      if (trailingBackslashes && trailingBackslashes[0].length % 2 !== 0) {
+        // Odd number of trailing backslashes — last one is an incomplete escape
+        truncated = truncated.slice(0, -1);
+      }
+      json = truncated + '"';
     }
   }
 
-  // Step 2: Remove trailing incomplete non-string values (e.g. "key": tru, "key": 12)
-  json = json.replace(/,\s*"[^"]*"\s*:\s*[^"{[\]},\s][^,}\]]*$/, "");
+  // Step 2: Remove trailing truncated non-string values (tru, fals, nul — not complete values)
+  json = json.replace(
+    /,\s*"[^"]*"\s*:\s*(?:tru|fals|nul|[-\d.]+e\+?)\s*$/i,
+    ""
+  );
 
-  // Step 3: Remove any trailing incomplete key (e.g. , "partial_key)
+  // Step 3: Remove trailing incomplete key without closing quote (e.g. , "partial_key)
   json = json.replace(/,\s*"[^"]*$/, "");
 
-  // Step 4: Close unclosed brackets and braces
+  // Step 4: Remove trailing "key": with colon but no value
+  json = json.replace(/,?\s*"[^"]*"\s*:\s*$/, "");
+
+  // Step 5: Close unclosed brackets and braces
   const openBrackets: string[] = [];
   let inString = false;
   let escaped = false;
@@ -113,7 +124,7 @@ function repairTruncatedJSON(text: string): unknown | null {
     }
   }
 
-  // Step 5: Strip trailing commas and close remaining brackets
+  // Step 6: Strip trailing commas and close remaining brackets
   json = json.replace(/,\s*$/, "");
 
   for (let i = openBrackets.length - 1; i >= 0; i--) {

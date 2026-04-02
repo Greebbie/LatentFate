@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createProvider } from "@/lib/providers";
 import { performProjection } from "@/lib/engine/projection";
+import { TruncatedResponseError } from "@/lib/providers/types";
 import { readingResultSchema } from "@/lib/engine/schemas";
 import type { DrawnCard } from "@/lib/tarot/types";
 
@@ -73,6 +74,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true, data: result });
   } catch (error: unknown) {
     const isInputValidation = error instanceof z.ZodError;
+    const isTruncation = error instanceof TruncatedResponseError;
     const errorMsg = error instanceof Error ? error.message : "";
     const isJsonExtraction = errorMsg.includes("Failed to extract JSON");
     const isSchemaValidation =
@@ -87,6 +89,9 @@ export async function POST(request: Request) {
     if (isInputValidation) {
       message = `Validation error: ${error.issues.map((e: z.ZodIssue) => e.message).join(", ")}`;
       status = 400;
+    } else if (isTruncation) {
+      message = "推演内容过长被截断，模型输出超出长度限制，请重试";
+      status = 502;
     } else if (isJsonExtraction) {
       message = "推演结果解析失败，模型输出格式异常，请重试";
       status = 502;

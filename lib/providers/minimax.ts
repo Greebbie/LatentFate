@@ -48,12 +48,17 @@ export class MiniMaxProvider implements LLMProvider {
       })),
     });
 
-    if (response.choices[0]?.finish_reason === "length") {
-      throw new TruncatedResponseError("length");
-    }
-
     const content = response.choices[0]?.message?.content ?? "{}";
-    const parsed = extractJSON(content);
-    return params.schema.parse(parsed);
+    const truncated = response.choices[0]?.finish_reason === "length";
+
+    try {
+      const parsed = extractJSON(content);
+      return params.schema.parse(parsed);
+    } catch (parseError) {
+      if (truncated) {
+        throw new TruncatedResponseError("length");
+      }
+      throw parseError;
+    }
   }
 }

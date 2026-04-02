@@ -90,12 +90,16 @@ export class OllamaProvider implements LLMProvider {
     }
 
     const data = (await response.json()) as OllamaChatResponse;
+    const truncated = data.done_reason === "length";
 
-    if (data.done_reason === "length") {
-      throw new TruncatedResponseError("length");
+    try {
+      const parsed = extractJSON(data.message.content);
+      return params.schema.parse(parsed);
+    } catch (parseError) {
+      if (truncated) {
+        throw new TruncatedResponseError("length");
+      }
+      throw parseError;
     }
-
-    const parsed = extractJSON(data.message.content);
-    return params.schema.parse(parsed);
   }
 }
