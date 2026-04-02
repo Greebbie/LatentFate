@@ -28,6 +28,6 @@ export async function performReading(
     schema: readingResultSchema,
     schemaName: "ReadingResult",
     model,
-    temperature: 0.7,
+    temperature: 0.8,
   });
 }

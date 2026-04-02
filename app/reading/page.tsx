@@ -212,8 +212,11 @@ export default function ReadingPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex justify-center pb-8"
+              className="flex flex-col items-center gap-4 pb-8"
             >
+              <p className="text-[10px] text-muted-foreground/50 uppercase tracking-[0.15em] text-center">
+                基于以上状态分析，推演引擎将模拟 2-4 条可能的行动路径
+              </p>
               <button
                 onClick={handleContinue}
                 className="px-8 py-3 rounded-lg bg-latent-blue/10 border border-latent-blue/20 text-latent-blue hover:bg-latent-blue/15 hover:border-latent-blue/30 transition-colors font-mono text-sm uppercase tracking-[0.2em]"

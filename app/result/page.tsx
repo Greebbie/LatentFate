@@ -2,8 +2,9 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { BranchMap } from "@/components/result/branch-map";
+import { ReadingSummary } from "@/components/result/reading-summary";
 import { RevealedCard } from "@/components/card/tarot-card";
 import type { ProjectionResult } from "@/lib/engine/schemas";
 import type { ReadingSession } from "@/lib/store";
@@ -15,6 +16,7 @@ export default function ResultPage() {
   const [projection, setProjection] = useState<ProjectionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [showFullReading, setShowFullReading] = useState(false);
 
   const runProjection = useCallback(async () => {
     const currentSession = getCurrentSession();
@@ -121,6 +123,36 @@ export default function ResultPage() {
                 </div>
               ))}
             </div>
+          </motion.div>
+        )}
+
+        {/* Reading context — narrative continuity */}
+        {session?.reading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="border border-border/30 rounded-lg p-4 space-y-3"
+          >
+            <ReadingSummary reading={session.reading} compact />
+            <button
+              onClick={() => setShowFullReading(!showFullReading)}
+              className="text-[9px] font-mono uppercase tracking-wider text-muted-foreground/50 hover:text-muted-foreground/70 transition-colors"
+            >
+              {showFullReading ? "▲ 收起解读" : "▼ 展开完整解读"}
+            </button>
+            <AnimatePresence>
+              {showFullReading && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden border-t border-border/20 pt-4"
+                >
+                  <ReadingSummary reading={session.reading} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         )}
 

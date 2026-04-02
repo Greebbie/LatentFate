@@ -24,6 +24,7 @@ export class MiniMaxProvider implements LLMProvider {
   async chat(params: ChatParams): Promise<string> {
     const response = await this.client.chat.completions.create({
       model: params.model ?? this.defaultModel,
+      max_tokens: 8192,
       temperature: params.temperature ?? 0.7,
       messages: params.messages.map((msg) => ({
         role: msg.role,
@@ -37,6 +38,7 @@ export class MiniMaxProvider implements LLMProvider {
   async chatStructured<T>(params: StructuredChatParams<T>): Promise<T> {
     const response = await this.client.chat.completions.create({
       model: params.model ?? this.defaultModel,
+      max_tokens: 8192,
       temperature: params.temperature ?? 0.7,
       response_format: { type: "json_object" },
       messages: [
