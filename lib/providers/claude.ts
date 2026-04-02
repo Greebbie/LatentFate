@@ -23,7 +23,7 @@ export class ClaudeProvider implements LLMProvider {
 
     const response = await this.client.messages.create({
       model: params.model ?? this.defaultModel,
-      max_tokens: 8192,
+      max_tokens: 16384,
       temperature: params.temperature ?? 0.7,
       system: systemMessage,
       messages: userMessages,

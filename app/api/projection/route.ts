@@ -72,14 +72,31 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, data: result });
   } catch (error: unknown) {
-    const message =
-      error instanceof z.ZodError
-        ? `Validation error: ${error.issues.map((e) => e.message).join(", ")}`
-        : error instanceof Error
-          ? error.message
-          : "An unexpected error occurred";
+    const isInputValidation = error instanceof z.ZodError;
+    const errorMsg = error instanceof Error ? error.message : "";
+    const isJsonExtraction = errorMsg.includes("Failed to extract JSON");
+    const isSchemaValidation =
+      !isInputValidation &&
+      (errorMsg.includes("expected") ||
+        errorMsg.includes("Required") ||
+        errorMsg.includes("invalid"));
 
-    const status = error instanceof z.ZodError ? 400 : 500;
+    let message: string;
+    let status: number;
+
+    if (isInputValidation) {
+      message = `Validation error: ${error.issues.map((e: z.ZodIssue) => e.message).join(", ")}`;
+      status = 400;
+    } else if (isJsonExtraction) {
+      message = "推演结果解析失败，模型输出格式异常，请重试";
+      status = 502;
+    } else if (isSchemaValidation) {
+      message = "推演结果结构不完整，模型输出缺少必要字段，请重试";
+      status = 502;
+    } else {
+      message = errorMsg || "An unexpected error occurred";
+      status = 500;
+    }
 
     return NextResponse.json(
       { success: false, error: message },

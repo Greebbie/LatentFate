@@ -83,6 +83,7 @@ export class OllamaProvider implements LLMProvider {
         format: "json",
         options: {
           temperature: params.temperature ?? 0.7,
+          num_predict: 16384,
         },
       }),
     });
