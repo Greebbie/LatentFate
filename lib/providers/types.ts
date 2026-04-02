@@ -32,3 +32,10 @@ export interface ProviderConfig {
   baseUrl?: string;
   model?: string;
 }
+
+export class TruncatedResponseError extends Error {
+  constructor(finishReason: string) {
+    super(`LLM response truncated (finish_reason: ${finishReason})`);
+    this.name = "TruncatedResponseError";
+  }
+}

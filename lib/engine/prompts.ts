@@ -213,7 +213,7 @@ ${question}
 ${background ? `\n## 背景\n${background}` : ""}
 
 ## Reading 结果
-${JSON.stringify(reading, null, 2)}
+${JSON.stringify(reading)}
 
 ## 采样结果
 ${formatCards(cards)}

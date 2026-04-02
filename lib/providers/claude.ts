@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { LLMProvider, ChatParams, StructuredChatParams, Message } from "./types";
+import { TruncatedResponseError } from "./types";
 import { extractJSON } from "./parse-json";
 
 export class ClaudeProvider implements LLMProvider {
@@ -34,18 +35,22 @@ export class ClaudeProvider implements LLMProvider {
   }
 
   async chatStructured<T>(params: StructuredChatParams<T>): Promise<T> {
-    const rawResponse = await this.chat({
-      ...params,
-      messages: [
-        ...params.messages,
-        {
-          role: "user" as const,
-          content:
-            "Respond ONLY with valid JSON matching the required schema. No markdown, no code fences, no explanation — just the JSON object.",
-        },
-      ],
+    const { systemMessage, userMessages } = this.splitMessages(params.messages);
+
+    const response = await this.client.messages.create({
+      model: params.model ?? this.defaultModel,
+      max_tokens: 16384,
+      temperature: params.temperature ?? 0.7,
+      system: systemMessage,
+      messages: userMessages,
     });
 
+    if (response.stop_reason === "max_tokens") {
+      throw new TruncatedResponseError("max_tokens");
+    }
+
+    const textBlock = response.content.find((block) => block.type === "text");
+    const rawResponse = textBlock?.text ?? "{}";
     const parsed = extractJSON(rawResponse);
     return params.schema.parse(parsed);
   }

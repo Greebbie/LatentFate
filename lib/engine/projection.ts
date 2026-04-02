@@ -1,4 +1,5 @@
 import type { LLMProvider } from "@/lib/providers/types";
+import { TruncatedResponseError } from "@/lib/providers/types";
 import type { DrawnCard } from "@/lib/tarot/types";
 import {
   projectionResultSchema,
@@ -18,6 +19,7 @@ export interface ProjectionInput {
 }
 
 function isRetryableError(error: unknown): boolean {
+  if (error instanceof TruncatedResponseError) return true;
   if (error instanceof Error) {
     const msg = error.message.toLowerCase();
     return (

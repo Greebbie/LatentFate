@@ -1,4 +1,5 @@
 import type { LLMProvider, ChatParams, StructuredChatParams } from "./types";
+import { TruncatedResponseError } from "./types";
 import { extractJSON } from "./parse-json";
 
 interface OllamaMessage {
@@ -11,6 +12,7 @@ interface OllamaChatResponse {
     role: string;
     content: string;
   };
+  done_reason?: string;
 }
 
 export class OllamaProvider implements LLMProvider {
@@ -66,19 +68,12 @@ export class OllamaProvider implements LLMProvider {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: params.model ?? this.defaultModel,
-        messages: [
-          ...params.messages.map(
-            (msg): OllamaMessage => ({
-              role: msg.role,
-              content: msg.content,
-            })
-          ),
-          {
-            role: "user",
-            content:
-              "Respond ONLY with valid JSON matching the required schema. No markdown, no explanation — just the JSON object.",
-          },
-        ],
+        messages: params.messages.map(
+          (msg): OllamaMessage => ({
+            role: msg.role,
+            content: msg.content,
+          })
+        ),
         stream: false,
         format: "json",
         options: {
@@ -95,6 +90,11 @@ export class OllamaProvider implements LLMProvider {
     }
 
     const data = (await response.json()) as OllamaChatResponse;
+
+    if (data.done_reason === "length") {
+      throw new TruncatedResponseError("length");
+    }
+
     const parsed = extractJSON(data.message.content);
     return params.schema.parse(parsed);
   }

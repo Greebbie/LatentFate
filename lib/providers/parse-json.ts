@@ -49,18 +49,32 @@ function repairTruncatedJSON(text: string): unknown | null {
 
   let json = text.slice(start);
 
-  // Remove any trailing incomplete string value (cut mid-sentence)
-  // Look for the last complete key-value pair
-  json = json.replace(/,\s*"[^"]*":\s*"[^"]*$/, "");
-  json = json.replace(/,\s*"[^"]*$/, "");
-
-  // Close any unclosed string
+  // Step 1: Handle unclosed strings
   const quoteCount = (json.match(/(?<!\\)"/g) || []).length;
   if (quoteCount % 2 !== 0) {
-    json += '"';
+    // We're inside an unclosed string — find the last opening quote
+    const lastQuote = json.lastIndexOf('"');
+    const beforeQuote = json.slice(0, lastQuote).trimEnd();
+
+    if (beforeQuote.endsWith(":")) {
+      // Truncated at value start — remove the entire trailing key-value pair
+      json = json.slice(0, lastQuote).replace(/,?\s*"[^"]*"\s*:\s*$/, "");
+    } else if (beforeQuote.endsWith(",") || beforeQuote.endsWith("[")) {
+      // Truncated inside an array element or after comma
+      json = json.slice(0, lastQuote).replace(/,?\s*$/, "");
+    } else {
+      // Mid-string truncation — close the string
+      json = json + '"';
+    }
   }
 
-  // Close unclosed brackets and braces
+  // Step 2: Remove trailing incomplete non-string values (e.g. "key": tru, "key": 12)
+  json = json.replace(/,\s*"[^"]*"\s*:\s*[^"{[\]},\s][^,}\]]*$/, "");
+
+  // Step 3: Remove any trailing incomplete key (e.g. , "partial_key)
+  json = json.replace(/,\s*"[^"]*$/, "");
+
+  // Step 4: Close unclosed brackets and braces
   const openBrackets: string[] = [];
   let inString = false;
   let escaped = false;
@@ -99,8 +113,11 @@ function repairTruncatedJSON(text: string): unknown | null {
     }
   }
 
-  // Close remaining open brackets in reverse order
+  // Step 5: Strip trailing commas and close remaining brackets
+  json = json.replace(/,\s*$/, "");
+
   for (let i = openBrackets.length - 1; i >= 0; i--) {
+    json = json.replace(/,\s*$/, "");
     json += openBrackets[i] === "{" ? "}" : "]";
   }
 
