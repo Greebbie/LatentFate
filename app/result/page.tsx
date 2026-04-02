@@ -48,10 +48,15 @@ export default function ResultPage() {
         }),
       });
 
-      const result = await response.json();
+      let result;
+      try {
+        result = await response.json();
+      } catch {
+        throw new Error("服务器响应异常，请重试");
+      }
 
       if (!result.success) {
-        throw new Error(result.error || "Projection failed");
+        throw new Error(result.error || "推演失败，请重试");
       }
 
       setProjection(result.data);

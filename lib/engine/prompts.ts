@@ -1,5 +1,5 @@
 import type { DrawnCard } from "@/lib/tarot/types";
-import type { ReadingResult } from "./schemas";
+import type { ReadingResult, ProjectionSkeleton } from "./schemas";
 
 function formatCards(cards: DrawnCard[]): string {
   return cards
@@ -86,30 +86,33 @@ const READING_SCHEMA = `{
   ]
 }`;
 
-const PROJECTION_SCHEMA = `{
-  "predicted_behaviors": ["对方/事态最可能出现的行为1", "行为2", "行为3"],
+const SKELETON_SCHEMA = `{
+  "predicted_behaviors": ["对方/事态最可能出现的行为1", "行为2"],
   "branches": [
     {
       "id": "branch_1",
       "action": "行动标签（2-6字）",
       "action_description": "2-3句描述这个策略姿态及选择它的原因",
-      "likelihood": "highly_likely 或 possible 或 unlikely 或 speculative",
-      "emotional_trajectory": "从起点到d30，提问者在这条路径上的情绪演变轨迹",
-      "timeline": {
-        "h24": "24小时场景：发生什么、感受如何、能观察到什么。2-4句。",
-        "d3": "3天场景：发展、情绪变化、可观察信号。2-4句。",
-        "d7": "7天场景：轨迹固化还是分化。2-4句。",
-        "d30": "30天场景：这条路径可能通向哪里。2-4句。"
-      },
-      "trigger_conditions": ["表明此路径正在成型的具体可观察条件1"],
-      "risks": ["具体风险，不是泛泛警告"],
-      "turning_point": "这条路径上决定最终走向的关键转折时刻"
+      "likelihood": "highly_likely 或 possible 或 unlikely 或 speculative"
     }
   ],
   "high_confidence_trends": ["无论哪条分支都成立的趋势"],
   "weak_signals": ["未来7天内值得观察的微弱信号"],
   "uncertainty_notes": ["信心最低的地方及原因"],
-  "disclaimer": "这是叙事性推演，不是统计概率预测。"
+  "disclaimer": "叙事性推演，不是统计概率预测"
+}`;
+
+const BRANCH_DETAIL_SCHEMA = `{
+  "emotional_trajectory": "从起点到d30，提问者在这条路径上的情绪演变轨迹",
+  "timeline": {
+    "h24": "24小时场景：发生什么、感受如何、能观察到什么。2-3句。",
+    "d3": "3天场景：发展、情绪变化、可观察信号。2-3句。",
+    "d7": "7天场景：轨迹固化还是分化。2-3句。",
+    "d30": "30天场景：这条路径可能通向哪里。2-3句。"
+  },
+  "trigger_conditions": ["表明此路径正在成型的具体可观察条件"],
+  "risks": ["具体风险"],
+  "turning_point": "这条路径上决定最终走向的关键转折时刻"
 }`;
 
 export function buildReadingPrompt(
@@ -165,48 +168,33 @@ ${formatElementalContext(cards)}
   return { system, user };
 }
 
-export function buildProjectionPrompt(
+export function buildSkeletonPrompt(
   question: string,
   background: string | undefined,
   cards: DrawnCard[],
   reading: ReadingResult
 ): { system: string; user: string } {
-  const system = `你是 LatentFate 的推演引擎。基于已完成的 Reading（状态分析），你模拟分支未来。
+  const system = `你是 LatentFate 的推演引擎。基于已完成的 Reading，你识别提问者面前的决策空间。
 
-## 你的角色
-你是行为轨迹模拟器。Reading 给了你当前状态——现在你向前推演。你同时建模提问者的选择和对方/事态的可能反应。
+## 任务
+分析提问者可以采取的 2-3 个有本质差异的策略姿态，以及跨分支的行为预测和趋势判断。
+这是第一阶段——只需要分支框架和总体分析，详细时间线将在下一阶段生成。
 
-## 推演方法
-1. **识别决策空间**：提问者可以采取的 2-4 个有本质差异的行动是什么？不要生成显而易见或区别微小的分支。每条分支必须代表一种真正不同的策略姿态。
-2. **对每条分支，模拟互动循环**：
-   - 提问者做了什么 → 对方/事态可能如何回应 → 这又触发了什么
-   - 在每个时间窗口（24h, 3天, 7天, 30天），描写**场景**，不只是结果。看起来/感觉如何？能观察到什么具体行为？
-3. **预测对方最可能的行为**（跨所有分支的 top 2-4）——这些是无论提问者选择哪条路径都应该留意的行为信号。
-4. **追踪情绪轨迹**：提问者的情绪状态在每条路径上如何演变？不是"情况好转"，而是情绪体验的具体质地。
-
-## 时间窗口描写规则
-每个时间窗口（h24, d3, d7, d30）必须至少 2-4 句。包含：
-- 具体发生或变化的事
-- 潜在的情绪暗流
-- 提问者可以观察到的、表明这条路径正在展开的证据
-不要写一句话概括。每个窗口都是一个小场景。
+## 方法
+1. **识别决策空间**：2-3 个真正不同的策略姿态。不要生成显而易见或区别微小的分支。
+2. **预测行为信号**：无论提问者选择哪条路径都应留意的 2-3 个行为信号。
+3. **标注信心**：诚实标注每条分支的 likelihood。
 
 ## 语调
-冷峻、精准、不留情面。你像战略分析师一样交付推演，不是治疗师。如果某条路径通向痛苦，清晰地描述那个痛苦。如果不确定性高，说出来——但仍然描述不确定性在实践中的样子。
+冷峻、精准的战略分析师。
 
 ## 规则
-- 生成 2-4 条策略姿态真正不同的分支
-- 时间窗口描写必须生动具体，不能抽象
-- 每条分支必须包含一个关键转折点
-- 诚实标注信心：对波动情境中超过 d7 的预测使用 speculative
-- 使用中文（中文）
-- 不要使用概率数字或百分比
-- 只输出 JSON 对象，不要有任何其他文字
+- branches 数组必须有 2-3 个条目
+- 使用中文
+- 只输出 JSON
 
-你必须输出一个严格匹配以下结构的 JSON 对象：
-${PROJECTION_SCHEMA}
-
-branches 数组必须有 2-4 个条目。每个字段都必须填写。`;
+输出结构：
+${SKELETON_SCHEMA}`;
 
   const user = `## 问题
 ${question}
@@ -220,6 +208,69 @@ ${formatCards(cards)}
 
 ## 元素互动
 ${formatElementalContext(cards)}
+
+输出JSON:`;
+
+  return { system, user };
+}
+
+export function buildBranchDetailPrompt(
+  question: string,
+  background: string | undefined,
+  cards: DrawnCard[],
+  reading: ReadingResult,
+  branch: ProjectionSkeleton["branches"][number],
+  allBranches: ProjectionSkeleton["branches"]
+): { system: string; user: string } {
+  const system = `你是 LatentFate 的推演引擎。你正在为一条特定的策略分支生成详细的时间线推演。
+
+## 任务
+基于给定的策略姿态和 Reading 上下文，模拟这条路径在不同时间窗口的具体展开。
+
+## 描写规则
+每个时间窗口（h24, d3, d7, d30）写 2-3 句：
+- 具体发生或变化的事
+- 潜在的情绪暗流
+- 提问者可以观察到的证据
+每个窗口都是一个小场景，不是一句话概括。
+
+## 语调
+冷峻、精准、不留情面。战略分析师，不是治疗师。
+
+## 规则
+- 时间窗口描写必须生动具体
+- 必须包含一个关键转折点
+- 对波动情境中超过 d7 的预测保持谨慎
+- 使用中文
+- 只输出 JSON
+
+输出结构：
+${BRANCH_DETAIL_SCHEMA}`;
+
+  const otherBranches = allBranches
+    .filter((b) => b.id !== branch.id)
+    .map((b) => `- ${b.action}: ${b.action_description}`)
+    .join("\n");
+
+  const user = `## 问题
+${question}
+${background ? `\n## 背景\n${background}` : ""}
+
+## 当前分支
+行动: ${branch.action}
+描述: ${branch.action_description}
+可能性: ${branch.likelihood}
+
+## 其他分支（供对比）
+${otherBranches}
+
+## Reading 上下文
+${reading.overview}
+核心矛盾: ${reading.core_tension}
+叙事弧线: ${reading.narrative_arc}
+
+## 牌面
+${formatCards(cards)}
 
 输出JSON:`;
 

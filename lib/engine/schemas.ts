@@ -154,3 +154,66 @@ export const projectionResultSchema = z.object({
 });
 
 export type ProjectionResult = z.infer<typeof projectionResultSchema>;
+
+/* ── Two-phase projection schemas ── */
+
+export const projectionSkeletonSchema = z.object({
+  predicted_behaviors: z
+    .array(z.string())
+    .min(2)
+    .max(3)
+    .describe("Behavioral signals to watch for regardless of branch"),
+  branches: z
+    .array(
+      z.object({
+        id: z.string(),
+        action: z.string().describe("Short action label (2-6 chars)"),
+        action_description: z
+          .string()
+          .describe("2-3 sentences describing this strategic posture"),
+        likelihood: likelihoodSchema,
+      })
+    )
+    .min(2)
+    .max(3),
+  high_confidence_trends: z
+    .array(z.string())
+    .min(1)
+    .describe("Trends that hold regardless of branch"),
+  weak_signals: z
+    .array(z.string())
+    .describe("Subtle indicators worth monitoring"),
+  uncertainty_notes: z
+    .array(z.string())
+    .describe("Where confidence is lowest and why"),
+  disclaimer: z.string(),
+});
+
+export type ProjectionSkeleton = z.infer<typeof projectionSkeletonSchema>;
+
+export const branchDetailSchema = z.object({
+  emotional_trajectory: z
+    .string()
+    .describe("How the querent's emotional experience evolves along this path"),
+  timeline: z.object({
+    h24: z.string().describe("24h scene, 2-3 sentences"),
+    d3: z.string().describe("3-day scene, 2-3 sentences"),
+    d7: z.string().describe("7-day scene, 2-3 sentences"),
+    d30: z.string().describe("30-day scene, 2-3 sentences"),
+  }),
+  trigger_conditions: z
+    .array(z.string())
+    .min(1)
+    .max(4)
+    .describe("Observable conditions indicating this path is materializing"),
+  risks: z
+    .array(z.string())
+    .min(1)
+    .max(3)
+    .describe("Concrete risks"),
+  turning_point: z
+    .string()
+    .describe("The critical decision point within this path"),
+});
+
+export type BranchDetail = z.infer<typeof branchDetailSchema>;

@@ -1,15 +1,12 @@
 import type { LLMProvider } from "@/lib/providers/types";
-import { TruncatedResponseError } from "@/lib/providers/types";
 import type { DrawnCard } from "@/lib/tarot/types";
 import {
-  projectionResultSchema,
+  projectionSkeletonSchema,
+  branchDetailSchema,
   type ProjectionResult,
   type ReadingResult,
 } from "./schemas";
-import { buildProjectionPrompt } from "./prompts";
-
-const MAX_ATTEMPTS = 3;
-const BASE_TEMPERATURE = 0.5;
+import { buildSkeletonPrompt, buildBranchDetailPrompt } from "./prompts";
 
 export interface ProjectionInput {
   question: string;
@@ -18,53 +15,65 @@ export interface ProjectionInput {
   reading: ReadingResult;
 }
 
-function isRetryableError(error: unknown): boolean {
-  if (error instanceof TruncatedResponseError) return true;
-  if (error instanceof Error) {
-    const msg = error.message.toLowerCase();
-    return (
-      msg.includes("failed to extract json") ||
-      msg.includes("expected") ||
-      msg.includes("required") ||
-      msg.includes("invalid")
-    );
-  }
-  return false;
-}
-
 export async function performProjection(
   input: ProjectionInput,
   provider: LLMProvider,
   model?: string
 ): Promise<ProjectionResult> {
-  const { system, user } = buildProjectionPrompt(
+  // Phase 1: Generate skeleton (small output — branch framework + trends)
+  const { system: skelSystem, user: skelUser } = buildSkeletonPrompt(
     input.question,
     input.background,
     input.cards,
     input.reading
   );
 
-  let lastError: unknown;
+  const skeleton = await provider.chatStructured({
+    messages: [
+      { role: "system", content: skelSystem },
+      { role: "user", content: skelUser },
+    ],
+    schema: projectionSkeletonSchema,
+    schemaName: "ProjectionSkeleton",
+    model,
+    temperature: 0.5,
+  });
 
-  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
-    try {
-      return await provider.chatStructured({
-        messages: [
-          { role: "system", content: system },
-          { role: "user", content: user },
-        ],
-        schema: projectionResultSchema,
-        schemaName: "ProjectionResult",
-        model,
-        temperature: BASE_TEMPERATURE - attempt * 0.1,
-      });
-    } catch (error: unknown) {
-      lastError = error;
-      if (!isRetryableError(error) || attempt === MAX_ATTEMPTS - 1) {
-        throw error;
-      }
-    }
-  }
+  // Phase 2: Generate branch details in parallel (each call is small)
+  const detailPromises = skeleton.branches.map((branch) => {
+    const { system, user } = buildBranchDetailPrompt(
+      input.question,
+      input.background,
+      input.cards,
+      input.reading,
+      branch,
+      skeleton.branches
+    );
 
-  throw lastError;
+    return provider.chatStructured({
+      messages: [
+        { role: "system", content: system },
+        { role: "user", content: user },
+      ],
+      schema: branchDetailSchema,
+      schemaName: "BranchDetail",
+      model,
+      temperature: 0.5,
+    });
+  });
+
+  const details = await Promise.all(detailPromises);
+
+  // Merge skeleton + details into final result
+  return {
+    predicted_behaviors: skeleton.predicted_behaviors,
+    branches: skeleton.branches.map((branch, i) => ({
+      ...branch,
+      ...details[i],
+    })),
+    high_confidence_trends: skeleton.high_confidence_trends,
+    weak_signals: skeleton.weak_signals,
+    uncertainty_notes: skeleton.uncertainty_notes,
+    disclaimer: skeleton.disclaimer,
+  };
 }
