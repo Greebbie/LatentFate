@@ -74,83 +74,34 @@ export type Likelihood = z.infer<typeof likelihoodSchema>;
 export const projectionResultSchema = z.object({
   predicted_behaviors: z
     .array(z.string())
-    .min(2)
-    .max(4)
+    .min(1)
     .describe(
-      "The other party's / situation's most likely behaviors regardless of which branch the querent takes. Behavioral signals to watch for."
+      "The other party's / situation's most likely behaviors regardless of which branch the querent takes."
     ),
   branches: z
     .array(
       z.object({
         id: z.string(),
-        action: z.string().describe("Short action label (2-6 chars)"),
-        action_description: z
-          .string()
-          .describe(
-            "2-3 sentences describing this strategic posture and why someone might choose it"
-          ),
+        action: z.string(),
+        action_description: z.string(),
         likelihood: likelihoodSchema,
-        emotional_trajectory: z
-          .string()
-          .describe(
-            "How the querent's emotional experience evolves along this path, from start to d30"
-          ),
+        emotional_trajectory: z.string(),
         timeline: z.object({
-          h24: z
-            .string()
-            .describe(
-              "24h scene: what happens, what it feels like, what you'd observe. 2-4 sentences."
-            ),
-          d3: z
-            .string()
-            .describe(
-              "3-day scene: developments, emotional shifts, observable signals. 2-4 sentences."
-            ),
-          d7: z
-            .string()
-            .describe(
-              "7-day scene: trajectory solidifying or diverging. 2-4 sentences."
-            ),
-          d30: z
-            .string()
-            .describe(
-              "30-day scene: where this path likely leads. 2-4 sentences."
-            ),
+          h24: z.string(),
+          d3: z.string(),
+          d7: z.string(),
+          d30: z.string(),
         }),
-        trigger_conditions: z
-          .array(z.string())
-          .min(1)
-          .max(4)
-          .describe(
-            "Specific, observable conditions that indicate this path is materializing"
-          ),
-        risks: z
-          .array(z.string())
-          .min(1)
-          .max(3)
-          .describe("Concrete risks, not generic warnings"),
-        turning_point: z
-          .string()
-          .describe(
-            "The critical moment or decision point within this path that determines its ultimate direction"
-          ),
+        trigger_conditions: z.array(z.string()).min(1),
+        risks: z.array(z.string()).min(1),
+        turning_point: z.string(),
       })
     )
-    .min(2)
-    .max(4),
-  high_confidence_trends: z
-    .array(z.string())
-    .min(1)
-    .describe("Trends that hold regardless of which branch unfolds"),
-  weak_signals: z
-    .array(z.string())
-    .describe("Subtle indicators worth monitoring over the next 7 days"),
-  uncertainty_notes: z
-    .array(z.string())
-    .describe("Where confidence is lowest and why"),
-  disclaimer: z
-    .string()
-    .describe("Reminder that this is narrative projection, not prophecy"),
+    .min(1),
+  high_confidence_trends: z.array(z.string()).min(1),
+  weak_signals: z.array(z.string()),
+  uncertainty_notes: z.array(z.string()),
+  disclaimer: z.string(),
 });
 
 export type ProjectionResult = z.infer<typeof projectionResultSchema>;
@@ -158,62 +109,36 @@ export type ProjectionResult = z.infer<typeof projectionResultSchema>;
 /* ── Two-phase projection schemas ── */
 
 export const projectionSkeletonSchema = z.object({
-  predicted_behaviors: z
-    .array(z.string())
-    .min(2)
-    .max(3)
-    .describe("Behavioral signals to watch for regardless of branch"),
+  predicted_behaviors: z.array(z.string()).min(1),
   branches: z
     .array(
       z.object({
         id: z.string(),
-        action: z.string().describe("Short action label (2-6 chars)"),
-        action_description: z
-          .string()
-          .describe("2-3 sentences describing this strategic posture"),
+        action: z.string(),
+        action_description: z.string(),
         likelihood: likelihoodSchema,
       })
     )
-    .min(2)
-    .max(3),
-  high_confidence_trends: z
-    .array(z.string())
-    .min(1)
-    .describe("Trends that hold regardless of branch"),
-  weak_signals: z
-    .array(z.string())
-    .describe("Subtle indicators worth monitoring"),
-  uncertainty_notes: z
-    .array(z.string())
-    .describe("Where confidence is lowest and why"),
+    .min(2),
+  high_confidence_trends: z.array(z.string()).min(1),
+  weak_signals: z.array(z.string()),
+  uncertainty_notes: z.array(z.string()),
   disclaimer: z.string(),
 });
 
 export type ProjectionSkeleton = z.infer<typeof projectionSkeletonSchema>;
 
 export const branchDetailSchema = z.object({
-  emotional_trajectory: z
-    .string()
-    .describe("How the querent's emotional experience evolves along this path"),
+  emotional_trajectory: z.string(),
   timeline: z.object({
-    h24: z.string().describe("24h scene, 2-3 sentences"),
-    d3: z.string().describe("3-day scene, 2-3 sentences"),
-    d7: z.string().describe("7-day scene, 2-3 sentences"),
-    d30: z.string().describe("30-day scene, 2-3 sentences"),
+    h24: z.string(),
+    d3: z.string(),
+    d7: z.string(),
+    d30: z.string(),
   }),
-  trigger_conditions: z
-    .array(z.string())
-    .min(1)
-    .max(4)
-    .describe("Observable conditions indicating this path is materializing"),
-  risks: z
-    .array(z.string())
-    .min(1)
-    .max(3)
-    .describe("Concrete risks"),
-  turning_point: z
-    .string()
-    .describe("The critical decision point within this path"),
+  trigger_conditions: z.array(z.string()).min(1),
+  risks: z.array(z.string()).min(1),
+  turning_point: z.string(),
 });
 
 export type BranchDetail = z.infer<typeof branchDetailSchema>;
